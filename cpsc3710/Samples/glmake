@@ -1,0 +1,12 @@
+#!/bin/sh
+
+usage () {
+	echo "`basename $0` <filename>, where <filename> is the source file minus the file extention."
+}
+
+if [ $# != 1 ]; then
+	usage
+	exit 1
+fi
+
+gcc -o $1 -L/usr/X11R6/lib /usr/lib/libglut.so /usr/lib/libGLU.so /usr/lib/libGL.so -lXmu -lXi $1.c

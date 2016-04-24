@@ -1,0 +1,25 @@
+/* ---------------- provided by S. W. ----------------------*/
+/* rotate A about an arb axis U=(uX,uY,uZ) by Theta radians */
+
+void s_rotateAxis(GLfloat * A, GLfloat uX, GLfloat uY, GLfloat uZ, float Theta)
+{   float ct,st,lv0,lv1,lv2;
+      ct= cos(Theta);
+      st= sin(Theta);
+
+      lv0=A[0];
+      lv1=A[1];
+      lv2=A[2];
+
+    A[0] = lv0*(uX*uX +  ct      * (1.0-uX*uX))  +
+                     lv1*(uX*uY * (1.0-ct) - uZ*st)+
+		     lv2*(uZ*uX * (1.0-ct) + uY*st);
+
+   A[1] = lv0*(uX*uY * (1.0-ct) + uZ*st)+
+                     lv1*(uY*uY +  ct      * (1.0-uY*uY))  +
+		     lv2*(uY*uZ * (1.0-ct) - uX*st);
+
+    A[2] = lv0*(uZ*uX * (1.0-ct) - uY*st)+
+                     lv1*(uY*uZ * (1.0-ct) + uX*st)+
+                     lv2*(uZ*uZ +  ct      * (1.0-uZ*uZ));
+}
+/* ----------------------------------------------------------*/
