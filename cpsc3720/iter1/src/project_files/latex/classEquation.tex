@@ -1,0 +1,78 @@
+\hypertarget{classEquation}{
+\section{Equation Class Reference}
+\label{classEquation}\index{Equation@{Equation}}
+}
+The widget containing equation information. The equation class handles information regarding equation string entered by the user.  
+
+
+{\tt \#include $<$equation.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classEquation_59f8ca452dd6bd0c1a9ecc62cb32928b}{Equation} (QWidget $\ast$parent=0)
+\begin{CompactList}\small\item\em \hyperlink{classEquation}{Equation} constructor. \item\end{CompactList}\item 
+void \hyperlink{classEquation_a758f0166a7bd0d613fe5b292942ef32}{setEqationFromTruthTable} (QVector$<$ QString $>$)
+\item 
+QString \hyperlink{classEquation_3e114f1230c135d6e31c357e3b62ed19}{getEquation} ()
+\item 
+QVector$<$ QString $>$ \hyperlink{classEquation_fe44d379b63ad3ae64534cc503705e03}{getTruthTableFromEqation} ()
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+The widget containing equation information. The equation class handles information regarding equation string entered by the user. 
+
+\begin{Desc}
+\item[Author:]Curtis, Gezim, Jacob, Jeremy \end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classEquation_59f8ca452dd6bd0c1a9ecc62cb32928b}{
+\index{Equation@{Equation}!Equation@{Equation}}
+\index{Equation@{Equation}!Equation@{Equation}}
+\subsubsection[Equation]{\setlength{\rightskip}{0pt plus 5cm}Equation::Equation (QWidget $\ast$ {\em parent} = {\tt 0})}}
+\label{classEquation_59f8ca452dd6bd0c1a9ecc62cb32928b}
+
+
+\hyperlink{classEquation}{Equation} constructor. 
+
+A constructor that creates an equation object. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classEquation_a758f0166a7bd0d613fe5b292942ef32}{
+\index{Equation@{Equation}!setEqationFromTruthTable@{setEqationFromTruthTable}}
+\index{setEqationFromTruthTable@{setEqationFromTruthTable}!Equation@{Equation}}
+\subsubsection[setEqationFromTruthTable]{\setlength{\rightskip}{0pt plus 5cm}void Equation::setEqationFromTruthTable (QVector$<$ QString $>$)}}
+\label{classEquation_a758f0166a7bd0d613fe5b292942ef32}
+
+
+Function to change a truthtable QVector of QStrings into an equation QString. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em QVector$<$QString$>$}]\end{description}
+\end{Desc}
+\hypertarget{classEquation_3e114f1230c135d6e31c357e3b62ed19}{
+\index{Equation@{Equation}!getEquation@{getEquation}}
+\index{getEquation@{getEquation}!Equation@{Equation}}
+\subsubsection[getEquation]{\setlength{\rightskip}{0pt plus 5cm}QString Equation::getEquation ()}}
+\label{classEquation_3e114f1230c135d6e31c357e3b62ed19}
+
+
+Gets the equation in the form of a string. \begin{Desc}
+\item[Returns:]QString equation \end{Desc}
+\hypertarget{classEquation_fe44d379b63ad3ae64534cc503705e03}{
+\index{Equation@{Equation}!getTruthTableFromEqation@{getTruthTableFromEqation}}
+\index{getTruthTableFromEqation@{getTruthTableFromEqation}!Equation@{Equation}}
+\subsubsection[getTruthTableFromEqation]{\setlength{\rightskip}{0pt plus 5cm}QVector$<$ QString $>$ Equation::getTruthTableFromEqation ()}}
+\label{classEquation_fe44d379b63ad3ae64534cc503705e03}
+
+
+Function to change a equation QString into a truth table QVector of QStrings. \begin{Desc}
+\item[Returns:]QVector$<$QString$>$ equationAsTruthTableString \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+equation.h\item 
+equation.cc\end{CompactItemize}

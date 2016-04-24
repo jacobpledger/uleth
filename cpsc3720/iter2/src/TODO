@@ -1,0 +1,10 @@
+- Refactor adaptor classes
+- Variable name validity checking (input dialogs)
+- Utilize TTVal helper class (bigtime refactor of the backend)	 
+
+- Coding standards checkup
+- Commenting standards checkup
+
+MAYBE
+- help system / manual
+

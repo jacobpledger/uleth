@@ -1,0 +1,10 @@
+ <!DOCTYPE RCC><RCC version="1.0">
+ <qresource>
+   <!-- Help resources -->
+   <file>help/index.html</file>
+   <file>help/about.html</file>
+   <file>help/license.txt</file>
+   <!-- Icons -->
+   <file>icons/appIcon.png</file>
+ </qresource>
+ </RCC>

@@ -1,0 +1,264 @@
+<html>
+<title>Help</title>
+<!--/author Jacob Pledger-->
+<body>
+<p>
+<h1>Help Contents</h1>
+This document describes how to use Kmapper for the average user.<br>
+For developer level assistance, consult the doxygen Reference Manual
+</p>
+
+<hr>
+
+<p>
+<a href="#Notation"><b>Notation</b></a>
+</p>
+
+<p>
+<a href="#Input"><b>Input</b></a>
+</p>
+<p>
+	<a href="#Entering a Truth Table">Entering a Truth Table</a><br/>
+	<a href="#Entering a KMap">Entering a KMap</a><br/>
+	<a href="#Entering a Boolean Expression">Entering a Boolean Expression</a><br/>
+	<a href="#Modifying Input">Modifying Input</a><br/>
+	<a href="#Importing From a PLA File">Importing From a PLA File</a>
+</p>
+
+
+
+<p>
+<a href="#Output"><b>Output</b></a>
+</p>
+<p>
+	<a href="#Truth Table">Truth Table</a><br/>
+	<a href="#KMap">KMap</a><br/>
+	<a href="#Boolean Expression">Boolean Expression</a><br/>
+	<a href="#Exporting to a PLA File">Exporting to a PLA File</a><br/>
+	<a href="#PLA">Interpreting a PLA file</a>
+	
+</p>
+
+<hr>
+
+<p>
+<h2><a name="Notation">Notation</a></h2>
+The following is a description of the logical symbols used throughout this program. 
+Truth in these cases means one of the variables is equal to 1, false meaning a variable is equal to 0.<br>
+A'  - NOT A, the negation of A<br>
+A+B - A OR B, true if one of either A is true, B is true or both are true<br>
+A*B - A AND B, true only if both A and B are true.<br>
+A^B - A XOR B, true if either A is true, or B is true, but not both.
+Brackets are used the same as in mathematics, to delineate compund terms and change the order of operations. 
+</p>
+
+<p>
+<a href="#">Back to Top</a>
+</p>
+
+<hr>
+
+<p>
+<h2><a name="Input">Input</a></h2>
+To begin, select File, New…
+This will bring up a dialog box requesting you to select your input type. 
+You can choose between Truth Table, KMap, or Boolean Expression from the drop down menu. 
+When you have made your choice, press OK. Or press Cancel to quit.
+All dialog windows contain a field to enter desired number of variables and variable names. 
+You can type in the number of variables you want, or use the arrows to increment the counter. 
+Variable names can be up to 2 letters (CAPS or lowercase, alphabetic characters only). 
+If you change the names, you must click Save Names for them to be changed in the output.
+</p>
+
+<p>
+<a href="#">Back to Top</a>
+</p>
+
+<hr>
+
+<p>
+<h3><a name="Entering a Truth Table">Entering a Truth Table</a></h3>
+The Truth table is displayed top to bottom in binary order. 
+Minterm numbers are listed on the left hand side of the table. 
+To change an output value, simply click on the corresponding button in the far right column of the table. 
+The button will cycle from 0, to 1, to X, and back to 0, changing once each click. 
+When you have entered your desired truth values, press submit data.
+</p>
+
+<p>
+<a href="#">Back to Top</a>
+</p>
+
+<hr>
+
+<p>
+<h3><a name="Entering a KMap">Entering a KMap</a></h3>
+The KMap is displayed the same as a regular KMap. 
+The variable names corresponding to each axis on the KMap are labeled on their respective sides. 
+The respective values of those variables in each particular row and column are labeled at the top of each column and the left side of each row. 
+For example, A,B 00 means that A and B are equal to 0, alternatively written A'B'. 
+To change a value in the KMap, simply click the corresponding button. 
+The button will cycle through 0, 1, X, and back to 0, changing once each click. 
+When you have entered your desired KMap values, press submit data.
+</p>
+
+<p>
+<a href="#">Back to Top</a>
+</p>
+
+<hr>
+
+<p>
+<h3><a name="Entering a Boolean Expression">Entering a Boolean Expression</a></h3>
+Simply type the equation of the function you would like to simplify. 
+See <a href="#Notation">Notation</a> for help on which logical symbols to use. 
+In order to obtain accurate results, you must use the variable names you enter, or the default variable names provided. 
+If other variable names are used, the program will simply tell you that the function is always true. 
+(You will see the truth table final column and KMap filled with 1's, and the SOP/POS fields will read "1")
+</p>
+
+<p>
+<a href="#">Back to Top</a>
+</p>
+
+<hr>
+
+<p>
+<h3><a name="Modifying Input">Modifying Input</a></h3>
+If you wish to edit your previously entered input, click on File, and select Modify. 
+You will be prompted to select which type of input you wish to modify from a drop down menu. 
+Make your choice and press OK. The corresponding input window will appear with its current values. 
+You can edit the input the same way you entered it initially. See <a href="#Input">Input</a>.
+</p>
+
+<p>
+<a href="#">Back to Top</a>
+</p>
+
+<hr>
+
+<p>
+<h3><a name="Importing From a PLA File">Importing From a PLA File</a></h3>
+KMapper is able to import a truth table from a .pla (programmable logic array) file. 
+If you wish to import a file, simply click File, Import. 
+This will bring up a file browser requesting you to select the file. 
+When you have located the file, simply double click it, or select it and click Open. 
+This will load the truth table and the program will automatically generate a minimal solution.<br>
+See <a href="#Output">Output</a>
+Also see <a href="#PLA">Interpreting a PLA File</a>
+</p>
+
+<p>
+<a href="#">Back to Top</a>
+</p>
+
+<hr>
+
+<p>
+<h2><a name="Output">Output</a></h2>
+To view the output, simply click the Submit Data button, after entering your desired input. 
+The program will do the necessary calculations and output it in one of the following formats. 
+</p>
+<p>
+<a href="#">Back to Top</a>
+</p>
+
+<hr>
+<p>
+<h3><a name="Truth Table">Interpreting the Truth Table</a></h3>
+The x-1 columns from the left are individual variable values. 
+Each row is a term, a combination of these individual variables. 
+The terms are sequenced in binary order, read top to bottom. 
+These can also be read as minterms or maxterms 0 to x, top to bottom, 
+with maxterms being the locations with 0's in the final column, and minterms being the locations with 1's in the final column.
+The final column of the truth table is the corresponding truth value of the function, given each term. 
+In other words, the 1's in the final column of the table show all combinations of variables (ANDed together), that cause the function to be equal to 1. 
+The 0's in the final column of the table show all combinations of variables (ANDed together), that cause the function to be equal to 0.
+</p>
+
+<p>
+<A href="#">Back to Top</A>
+</p>
+
+<hr>
+
+<p>
+<h3><a name="KMap">Interpreting the KMap</a></h3>
+The KMap displays similarly to a regular KMap. The 1's are your minterms and the zeroes are your maxterms. 
+The corresponding variables and their respective values are located around the outer edges of the KMap. 
+The blue area indicates groupings of minterms, which are grouped in powers of 2. 
+Minterms belonging to multiple overlapping groups are shaded darker. 
+Shaded regions indicate where simplification has occurred. 
+For every 2 variables in a group, a term eliminates 1 variable from the simplified equation.
+</p>
+
+<p>
+<a href="#">Back to Top</a>
+</p>
+
+<hr>
+
+<p>
+<h3><a name="Boolean Expression">Interpreting the Boolean Expression</a></h3>
+The SOP (Sum of Products) field displays the simplified Boolean expression as a Sum of Products. 
+In other words, it is the simplified output from the groupings of the 1's on the KMap and Truth Table. 
+As the name implies, the terms consist of the variables being multiplied (ANDed) together. 
+Those terms are then ORed together to create the function.
+<br><br>
+The POS (Product of Sums) field displays the simplified Boolean expression as a Product of Sums.
+In other words, it is the simplified output from the groupings of the 0's on the KMap and Truth Table. 
+In this case, the terms consist of the variables being ORed together. 
+Those terms are then ANDed together to create the function.
+<br><br>
+The two are logically equivalent.
+</p>
+<p>
+<a href="#">Back to Top</a>
+</p>
+
+<hr>
+
+<p>
+<h3><a name="Exporting to a PLA File">Exporting to a PLA File</a></h3>
+Once you have generated a solution (See <a href="#Input">Input</a>), you may export the truth table that corresponds to that solution to a .pla (programmable logic array) file. 
+Generate a solution, and then go to File, Export. 
+This will bring up a file browser asking you to name the file and select the directory in which to save it. 
+When you have selected these, simply click Save.
+</p>
+
+<p>
+<a href="#">Back to Top</a>
+</p>
+
+<hr>
+
+<p>
+<h3><a name="PLA">Interpreting a PLA File</a></h3>
+<table>
+
+<tr><th>PLA</th><th>Description</th></tr>
+<tr><td>.i 3 </td><td>Number of Inputs Strings, .i is the tag indicating this. This value must be between 2 and 8. In this case, the number of variables is 3.</td></tr>
+<tr><td>.o 1 </td><td>Number of Outputs, .o is the tag indicating this. The value must always equal 1.</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>.ilb a b c </td><td>Names of Variables, .ilb is a tag, and a b c are the variable names. Variable names are separated by spaces.</td></tr>
+<tr><td>.ob f </td><td>Output Variable, the name of the "function", what you want to call the output.</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>
+011 1<br>
+010 1<br>
+101 1<br>
+</td><td>Truth Table, the first column is the input, in this case it consists of 3 variables. 
+This can consist of 1, 0, or - (indicating a don't care situation). 
+The second column, in this case consisting of 1 variable, is the output column, this can consist of 1,0,x</td></tr>
+<tr><td>.e</td><td>End of the file tag</td></tr>
+</table>
+
+</p>
+
+<p>
+<a href="#">Back to Top</a>
+</p>
+
+</p>
+</body>
+</html>

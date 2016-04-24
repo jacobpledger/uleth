@@ -1,0 +1,5 @@
+The LIBS line may have to be modified as following:
+
+LIBS          = $(SUBLIBS)  -L/usr/lib/qt4/lib -lQtGui -L/usr/lib/mysql -lpng -lSM -lICE -lXi -lXrender -lXrandr -lXcursor -lXinerama -lfreetype -lfontconfig -lXext -lX11 -lQtCore -lz -lm -ldl -lpthread -ldl -lcppunit #ldl and lcppunit added by johnny
+
+-ldl and -lcppunit must be added to the Makefile in order to compile

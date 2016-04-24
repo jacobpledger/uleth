@@ -1,0 +1,209 @@
+K 25
+svn:wc:ra_dav:version-url
+V 22
+/C3720/!svn/ver/49/src
+END
+TTVal.h
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/C3720/!svn/ver/39/src/TTVal.h
+END
+KMapWidget.cc
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/C3720/!svn/ver/39/src/KMapWidget.cc
+END
+AboutDialog.h
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/C3720/!svn/ver/40/src/AboutDialog.h
+END
+EquationInDialog.cc
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/C3720/!svn/ver/41/src/EquationInDialog.cc
+END
+Doxyfile
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/C3720/!svn/ver/1/src/Doxyfile
+END
+EquationParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/C3720/!svn/ver/46/src/EquationParser.h
+END
+HelpDialog.cc
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/C3720/!svn/ver/40/src/HelpDialog.cc
+END
+InputVariableNameWidget.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/C3720/!svn/ver/39/src/InputVariableNameWidget.h
+END
+MainWindow.h
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/C3720/!svn/ver/40/src/MainWindow.h
+END
+MainWindowWidget.cc
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/C3720/!svn/ver/39/src/MainWindowWidget.cc
+END
+TruthTableWidget.cc
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/C3720/!svn/ver/39/src/TruthTableWidget.cc
+END
+main.cc
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/C3720/!svn/ver/39/src/main.cc
+END
+InDialog.cc
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/C3720/!svn/ver/39/src/InDialog.cc
+END
+Common.h
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/C3720/!svn/ver/39/src/Common.h
+END
+TTVal.cc
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/C3720/!svn/ver/39/src/TTVal.cc
+END
+AboutDialog.cc
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/C3720/!svn/ver/40/src/AboutDialog.cc
+END
+KMapWidget.h
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/C3720/!svn/ver/39/src/KMapWidget.h
+END
+EquationInDialog.h
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/C3720/!svn/ver/39/src/EquationInDialog.h
+END
+KMapInDialog.cc
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/C3720/!svn/ver/39/src/KMapInDialog.cc
+END
+KMapInDialog.h
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/C3720/!svn/ver/39/src/KMapInDialog.h
+END
+EquationParser.cc
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/C3720/!svn/ver/46/src/EquationParser.cc
+END
+HelpDialog.h
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/C3720/!svn/ver/39/src/HelpDialog.h
+END
+InputVariableNameWidget.cc
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/C3720/!svn/ver/39/src/InputVariableNameWidget.cc
+END
+kmapper.pro
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/C3720/!svn/ver/40/src/kmapper.pro
+END
+resources.qrc
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/C3720/!svn/ver/40/src/resources.qrc
+END
+MainWindow.cc
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/C3720/!svn/ver/40/src/MainWindow.cc
+END
+TODO
+K 25
+svn:wc:ra_dav:version-url
+V 27
+/C3720/!svn/ver/28/src/TODO
+END
+DataBackend.cc
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/C3720/!svn/ver/49/src/DataBackend.cc
+END
+MainWindowWidget.h
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/C3720/!svn/ver/39/src/MainWindowWidget.h
+END
+DataBackend.h
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/C3720/!svn/ver/47/src/DataBackend.h
+END
+TruthTableWidget.h
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/C3720/!svn/ver/39/src/TruthTableWidget.h
+END
+TruthTableInDialog.cc
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/C3720/!svn/ver/39/src/TruthTableInDialog.cc
+END
+TruthTableInDialog.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/C3720/!svn/ver/39/src/TruthTableInDialog.h
+END
+InDialog.h
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/C3720/!svn/ver/39/src/InDialog.h
+END

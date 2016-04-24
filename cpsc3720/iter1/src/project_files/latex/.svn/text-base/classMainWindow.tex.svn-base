@@ -1,0 +1,39 @@
+\hypertarget{classMainWindow}{
+\section{MainWindow Class Reference}
+\label{classMainWindow}\index{MainWindow@{MainWindow}}
+}
+The main window containing all other widgets. The main window is a class which inherits the QMainWindow Class from QT and is an interface to the main window.  
+
+
+{\tt \#include $<$mainwindow.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classMainWindow_8b244be8b7b7db1b08de2a2acb9409db}{MainWindow} (QWidget $\ast$parent=0)
+\begin{CompactList}\small\item\em Main window constructor. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+The main window containing all other widgets. The main window is a class which inherits the QMainWindow Class from QT and is an interface to the main window. 
+
+\begin{Desc}
+\item[Author:]Curtis, Gezim, Jacob, Jeremy \end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMainWindow_8b244be8b7b7db1b08de2a2acb9409db}{
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\subsubsection[MainWindow]{\setlength{\rightskip}{0pt plus 5cm}MainWindow::MainWindow (QWidget $\ast$ {\em parent} = {\tt 0})}}
+\label{classMainWindow_8b244be8b7b7db1b08de2a2acb9409db}
+
+
+Main window constructor. 
+
+A constructor that creates a main window object. 
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+mainwindow.h\item 
+mainwindow.cc\end{CompactItemize}

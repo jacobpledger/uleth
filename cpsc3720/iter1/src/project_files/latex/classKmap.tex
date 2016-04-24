@@ -1,0 +1,81 @@
+\hypertarget{classKmap}{
+\section{Kmap Class Reference}
+\label{classKmap}\index{Kmap@{Kmap}}
+}
+The widget containing kmap information. The kmap class handles information regarding the values of a kmap.  
+
+
+{\tt \#include $<$kmap.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classKmap_65498308537f51ca27db6222ed358625}{Kmap} (QWidget $\ast$parent=0)
+\begin{CompactList}\small\item\em \hyperlink{classKmap}{Kmap} constructor. \item\end{CompactList}\item 
+void \hyperlink{classKmap_219aee8c1737391460c45c70db9af238}{setNextButtonValue} (QPushButton $\ast$currentButton)
+\item 
+void \hyperlink{classKmap_a1f56e49fd450b8ddcc3000ae897dc9b}{setKmapData} (QVector$<$ QString $>$ currentData)
+\item 
+QVector$<$ QString $>$ \hyperlink{classKmap_f04c56bae31de2f5419b8b97b4e92433}{getKmapData} ()
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+The widget containing kmap information. The kmap class handles information regarding the values of a kmap. 
+
+\begin{Desc}
+\item[Author:]Curtis, Gezim, Jacob, Jeremy \end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classKmap_65498308537f51ca27db6222ed358625}{
+\index{Kmap@{Kmap}!Kmap@{Kmap}}
+\index{Kmap@{Kmap}!Kmap@{Kmap}}
+\subsubsection[Kmap]{\setlength{\rightskip}{0pt plus 5cm}Kmap::Kmap (QWidget $\ast$ {\em parent} = {\tt 0})}}
+\label{classKmap_65498308537f51ca27db6222ed358625}
+
+
+\hyperlink{classKmap}{Kmap} constructor. 
+
+A constructor that creates a kmap object. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classKmap_219aee8c1737391460c45c70db9af238}{
+\index{Kmap@{Kmap}!setNextButtonValue@{setNextButtonValue}}
+\index{setNextButtonValue@{setNextButtonValue}!Kmap@{Kmap}}
+\subsubsection[setNextButtonValue]{\setlength{\rightskip}{0pt plus 5cm}void Kmap::setNextButtonValue (QPushButton $\ast$ {\em currentButton})}}
+\label{classKmap_219aee8c1737391460c45c70db9af238}
+
+
+Changes the symbol displayed in the sector of the kmap to the next symbol. Order: 0,1,X \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em $\ast$QPushButton}]\end{description}
+\end{Desc}
+\hypertarget{classKmap_a1f56e49fd450b8ddcc3000ae897dc9b}{
+\index{Kmap@{Kmap}!setKmapData@{setKmapData}}
+\index{setKmapData@{setKmapData}!Kmap@{Kmap}}
+\subsubsection[setKmapData]{\setlength{\rightskip}{0pt plus 5cm}void Kmap::setKmapData (QVector$<$ QString $>$ {\em currentData})}}
+\label{classKmap_a1f56e49fd450b8ddcc3000ae897dc9b}
+
+
+Stores the values entered into the kmap in a QVector of QStrings. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em QVector$<$QString$>$}]\end{description}
+\end{Desc}
+\hypertarget{classKmap_f04c56bae31de2f5419b8b97b4e92433}{
+\index{Kmap@{Kmap}!getKmapData@{getKmapData}}
+\index{getKmapData@{getKmapData}!Kmap@{Kmap}}
+\subsubsection[getKmapData]{\setlength{\rightskip}{0pt plus 5cm}QVector$<$ QString $>$ Kmap::getKmapData ()}}
+\label{classKmap_f04c56bae31de2f5419b8b97b4e92433}
+
+
+Gets the values entered into the \hyperlink{classKmap}{Kmap} in the form of a QString. \begin{Desc}
+\item[Returns:]QVector$<$QString$>$ kmapData \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+kmap.h\item 
+kmap.cc\end{CompactItemize}

@@ -1,0 +1,13 @@
+.i 3          <-- Number of Input Variables (needed)
+.o 1          <-- Number of output variables (optional. Should always be one)
+
+.ilb a b c    <-- Input Variable names (needed)
+.ob f         <-- Output Signal name (optional. We don't use this)
+
+.p 3          <-- Number of terms in truth table (optional and not needed)
+
+001 1         <-- Next three lines are needed
+010 0         <-- Note, because these variables give a 0, we disregard them.
+101 1
+
+.e             <-- End of file

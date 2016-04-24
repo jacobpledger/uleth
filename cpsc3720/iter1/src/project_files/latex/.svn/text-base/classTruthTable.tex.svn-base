@@ -1,0 +1,81 @@
+\hypertarget{classTruthTable}{
+\section{TruthTable Class Reference}
+\label{classTruthTable}\index{TruthTable@{TruthTable}}
+}
+The widget containing truth table information. The truth table class handles information regarding the values of equation function results.  
+
+
+{\tt \#include $<$truthtable.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classTruthTable_f9b06c61efffe292ed8b3b0ef852c5a7}{TruthTable} (QWidget $\ast$parent=0)
+\begin{CompactList}\small\item\em \hyperlink{classTruthTable}{TruthTable} constructor. \item\end{CompactList}\item 
+void \hyperlink{classTruthTable_95c09df538316eb34b1c6331d590e0d6}{setNextButtonValue} (QPushButton $\ast$currentButton)
+\item 
+void \hyperlink{classTruthTable_9c3bd1fe71820514cc3510e234f5dd57}{setTruthTableData} (QVector$<$ QString $>$ currentData)
+\item 
+QVector$<$ QString $>$ \hyperlink{classTruthTable_192f01d78bb510f636b8d05b395e705f}{getTruthTableData} ()
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+The widget containing truth table information. The truth table class handles information regarding the values of equation function results. 
+
+\begin{Desc}
+\item[Author:]Curtis, Gezim, Jacob, Jeremy \end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classTruthTable_f9b06c61efffe292ed8b3b0ef852c5a7}{
+\index{TruthTable@{TruthTable}!TruthTable@{TruthTable}}
+\index{TruthTable@{TruthTable}!TruthTable@{TruthTable}}
+\subsubsection[TruthTable]{\setlength{\rightskip}{0pt plus 5cm}TruthTable::TruthTable (QWidget $\ast$ {\em parent} = {\tt 0})}}
+\label{classTruthTable_f9b06c61efffe292ed8b3b0ef852c5a7}
+
+
+\hyperlink{classTruthTable}{TruthTable} constructor. 
+
+A constructor that creates a \hyperlink{classTruthTable}{TruthTable} object. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classTruthTable_95c09df538316eb34b1c6331d590e0d6}{
+\index{TruthTable@{TruthTable}!setNextButtonValue@{setNextButtonValue}}
+\index{setNextButtonValue@{setNextButtonValue}!TruthTable@{TruthTable}}
+\subsubsection[setNextButtonValue]{\setlength{\rightskip}{0pt plus 5cm}void TruthTable::setNextButtonValue (QPushButton $\ast$ {\em currentButton})}}
+\label{classTruthTable_95c09df538316eb34b1c6331d590e0d6}
+
+
+Changes the symbol displayed in the sector of the truth table to the next symbol. Order: 0,1 \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em $\ast$QPushButton}]\end{description}
+\end{Desc}
+\hypertarget{classTruthTable_9c3bd1fe71820514cc3510e234f5dd57}{
+\index{TruthTable@{TruthTable}!setTruthTableData@{setTruthTableData}}
+\index{setTruthTableData@{setTruthTableData}!TruthTable@{TruthTable}}
+\subsubsection[setTruthTableData]{\setlength{\rightskip}{0pt plus 5cm}void TruthTable::setTruthTableData (QVector$<$ QString $>$ {\em currentData})}}
+\label{classTruthTable_9c3bd1fe71820514cc3510e234f5dd57}
+
+
+Stores the truth table information in a QVector of QStrings. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em QVector$<$QString$>$}]\end{description}
+\end{Desc}
+\hypertarget{classTruthTable_192f01d78bb510f636b8d05b395e705f}{
+\index{TruthTable@{TruthTable}!getTruthTableData@{getTruthTableData}}
+\index{getTruthTableData@{getTruthTableData}!TruthTable@{TruthTable}}
+\subsubsection[getTruthTableData]{\setlength{\rightskip}{0pt plus 5cm}QVector$<$ QString $>$ TruthTable::getTruthTableData ()}}
+\label{classTruthTable_192f01d78bb510f636b8d05b395e705f}
+
+
+Gets the values entered into the \hyperlink{classTruthTable}{TruthTable} in the form of a QString. \begin{Desc}
+\item[Returns:]QVector$<$QString$>$ truthTableData \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+truthtable.h\item 
+truthtable.cc\end{CompactItemize}

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/specialk/!svn/ver/77/equation_parser
+END
+expressiontoken.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/specialk/!svn/ver/77/equation_parser/expressiontoken.cpp
+END
+error_checking.txt
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/specialk/!svn/ver/77/equation_parser/error_checking.txt
+END
+expressionparser.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/specialk/!svn/ver/77/equation_parser/expressionparser.h
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/specialk/!svn/ver/77/equation_parser/main.cpp
+END
+expressiontoken.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/specialk/!svn/ver/77/equation_parser/expressiontoken.h
+END
+expressionparser.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/specialk/!svn/ver/77/equation_parser/expressionparser.cpp
+END
+makefile
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/specialk/!svn/ver/39/equation_parser/makefile
+END

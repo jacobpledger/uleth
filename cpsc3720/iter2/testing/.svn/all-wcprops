@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 26
+/C3720/!svn/ver/49/testing
+END
+compilationNote.txt
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/C3720/!svn/ver/1/testing/compilationNote.txt
+END
+KMapperTest.cc
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/C3720/!svn/ver/33/testing/KMapperTest.cc
+END
+KMapperTest.h
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/C3720/!svn/ver/30/testing/KMapperTest.h
+END
+tester.cc
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/C3720/!svn/ver/1/testing/tester.cc
+END
+testing.pro
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/C3720/!svn/ver/49/testing/testing.pro
+END
+bugLog.txt
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/C3720/!svn/ver/1/testing/bugLog.txt
+END

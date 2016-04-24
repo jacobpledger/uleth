@@ -1,0 +1,12 @@
+.i 2
+.o 1
+
+.ilb x y
+.ob f
+
+.p 2
+
+XP 1
+PP 0
+
+.e

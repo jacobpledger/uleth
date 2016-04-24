@@ -1,0 +1,92 @@
+\hypertarget{classPrefPane}{
+\section{PrefPane Class Reference}
+\label{classPrefPane}\index{PrefPane@{PrefPane}}
+}
+The widget containing preference information. The preference pane class handles information regarding number of variables and the variables names.  
+
+
+{\tt \#include $<$prefpane.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classPrefPane_8d0d7fc68477f7e25c8b3db3c0b5c77f}{PrefPane} (QWidget $\ast$parent=0)
+\begin{CompactList}\small\item\em Preference pane constructor. \item\end{CompactList}\item 
+QVector$<$ QString $>$ \hyperlink{classPrefPane_f2ba42ce01d52d1da885cda71f37f2ab}{getVariableNames} ()
+\item 
+int \hyperlink{classPrefPane_66e33d34045834467f8f4b13e723c939}{getNumberOfVariables} ()
+\item 
+void \hyperlink{classPrefPane_d3ba55cc80273cef6ffc494f962c37f7}{setNumberOfVariables} (int numOfVars)
+\item 
+void \hyperlink{classPrefPane_68b42771287fe3cda331d8e807e11bda}{setVariableNames} (QVector$<$ QString $>$ varNames)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+The widget containing preference information. The preference pane class handles information regarding number of variables and the variables names. 
+
+\begin{Desc}
+\item[Author:]Curtis, Gezim, Jacob, Jeremy \end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPrefPane_8d0d7fc68477f7e25c8b3db3c0b5c77f}{
+\index{PrefPane@{PrefPane}!PrefPane@{PrefPane}}
+\index{PrefPane@{PrefPane}!PrefPane@{PrefPane}}
+\subsubsection[PrefPane]{\setlength{\rightskip}{0pt plus 5cm}PrefPane::PrefPane (QWidget $\ast$ {\em parent} = {\tt 0})}}
+\label{classPrefPane_8d0d7fc68477f7e25c8b3db3c0b5c77f}
+
+
+Preference pane constructor. 
+
+A constructor that creates a preference pain object. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classPrefPane_f2ba42ce01d52d1da885cda71f37f2ab}{
+\index{PrefPane@{PrefPane}!getVariableNames@{getVariableNames}}
+\index{getVariableNames@{getVariableNames}!PrefPane@{PrefPane}}
+\subsubsection[getVariableNames]{\setlength{\rightskip}{0pt plus 5cm}QVector$<$ QString $>$ PrefPane::getVariableNames ()}}
+\label{classPrefPane_f2ba42ce01d52d1da885cda71f37f2ab}
+
+
+Get the names selected for the variables by the user. \begin{Desc}
+\item[Returns:]QVector$<$QString$>$ variableNames \end{Desc}
+\hypertarget{classPrefPane_66e33d34045834467f8f4b13e723c939}{
+\index{PrefPane@{PrefPane}!getNumberOfVariables@{getNumberOfVariables}}
+\index{getNumberOfVariables@{getNumberOfVariables}!PrefPane@{PrefPane}}
+\subsubsection[getNumberOfVariables]{\setlength{\rightskip}{0pt plus 5cm}int PrefPane::getNumberOfVariables ()}}
+\label{classPrefPane_66e33d34045834467f8f4b13e723c939}
+
+
+Get the number of variables selected by the user. \begin{Desc}
+\item[Returns:]int numberOfVariables \end{Desc}
+\hypertarget{classPrefPane_d3ba55cc80273cef6ffc494f962c37f7}{
+\index{PrefPane@{PrefPane}!setNumberOfVariables@{setNumberOfVariables}}
+\index{setNumberOfVariables@{setNumberOfVariables}!PrefPane@{PrefPane}}
+\subsubsection[setNumberOfVariables]{\setlength{\rightskip}{0pt plus 5cm}void PrefPane::setNumberOfVariables (int {\em numOfVars})}}
+\label{classPrefPane_d3ba55cc80273cef6ffc494f962c37f7}
+
+
+Stores the number of variables selected by the user in the private data member numberOfVariables. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em int}]numOfVars \end{description}
+\end{Desc}
+\hypertarget{classPrefPane_68b42771287fe3cda331d8e807e11bda}{
+\index{PrefPane@{PrefPane}!setVariableNames@{setVariableNames}}
+\index{setVariableNames@{setVariableNames}!PrefPane@{PrefPane}}
+\subsubsection[setVariableNames]{\setlength{\rightskip}{0pt plus 5cm}void PrefPane::setVariableNames (QVector$<$ QString $>$ {\em varNames})}}
+\label{classPrefPane_68b42771287fe3cda331d8e807e11bda}
+
+
+Stores the name of variables selected by the user in the private data member variableNames. \begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em QVector$<$QString$>$}]varNames \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+prefpane.h\item 
+prefpane.cc\end{CompactItemize}

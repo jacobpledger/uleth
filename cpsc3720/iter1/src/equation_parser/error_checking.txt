@@ -1,0 +1,245 @@
+Grammar of expression string:
+
+<expression>:=<expression><or><expression>
+|<expression><and><expression>
+|<expression><xor><expression>
+|<not><expression>
+|<variable_name>
+|"("<expression>")"
+<or>:="+"
+<and>:="*"
+<not>:="~"
+<xor>:="^"
+<variable_name>:=<letter>|<digit>
+<letter>:="a"|"b"|"c"|...|"x"|"y"|"z"|"A"|"B"|"C"|...|"X"|"Y"|"Z"
+<digit>:="0"|"1"|"2"|...|"7"|"8"|"9"
+
+
+OP_EOL: Unary postfix operator
+OP_LP: Unary prefix operator
+OP_RP: Unary postfix operator
+OP_NOT: Unary prefix operator
+OP_AND: Binary infix operator
+OP_OR: Binary infix operator
+OP_XOR: Binary infix operator
+
+
+(a+b)*c
+
+<OP_LP>
+<ID>
+<OP_OR>
+<ID>
+<OP_RP>
+<OP_AND>
+<ID>
+
+
+Step: 1
+Depth = 0;
+Next Token: < ( > (OP_LP)
+
++----------------+---------------+
+| Operator Stack | Operand Stack |
++----------------+---------------+
+| <empty>        | <empty>       |
++----------------+---------------+
+
+This token is a unary prefix operator (takes one operand, one directly after).
+An OP_LP operator increments depth by 1. Depth = 1.
+Since the operator stack is empty, no operator precedence calculations need take place.
+We'll check the operand when we collapse the expression.
+Push the operator onto the operator stack (with new depth).
+
+Step: 2
+Depth: 1
+Next Token: <ID> (ID)
+
++----------------+---------------+
+| Operator Stack | Operand Stack |
++----------------+---------------+
+| < ( > (1)      | <empty>       |
++----------------+---------------+
+
+This token is an operand.
+The ID operand leaves depth unchanged.
+Push the operand onto the operand stack (using the current depth).
+
+Step: 3
+Depth: 1
+Next Token: < + > (OP_OR)
+
++----------------+---------------+
+| Operator Stack | Operand Stack |
++----------------+---------------+
+| < ( > (1)      | <ID> (1)      |
++----------------+---------------+
+
+This token is an binary infix operator (takes 2 operands, one directly before and one directly after).
+An OP_OR operator increments depth by 1. Depth = 2.
+Check the available operands for the binary infix operator, there should be one with a depth of (Depth - 1) (1).
+The top operand on the operand stack is <ID> (1), it has the correct depth, so the OP_OR operator has one of its required operands. We'll check the second operand when we collapse the expression.
+The operator stack is not empty, so we need to calculate operator precedence.
+The operator on the top of the operator stack it OP_LP.
+An OP_LP is ignored by all operators following it except OP_RP.
+Push the operator onto the operator stack (with new depth).
+
+Step: 4
+Depth: 2
+Next Token: <ID> (ID)
+
++----------------+---------------+
+| Operator Stack | Operand Stack |
++----------------+---------------+
+| < ( > (1)      | <ID> (1)      |
+| < + > (2)      |               |
++----------------+---------------+
+
+This token is an operand.
+The ID operand leaves depth unchanged.
+Push the operand onto the operand stack (using the current depth).
+
+Step: 5
+Depth: 2
+Next Token: < * > (OP_AND)
+
++----------------+---------------+
+| Operator Stack | Operand Stack |
++----------------+---------------+
+| < ( > (1)      | <ID> (1)      |
+| < + > (2)      | <ID> (2)      |
++----------------+---------------+
+
+This token is an binary infix operator (takes 2 parameters, one directly before and one directly after)
+An OP_AND operator increments depth by 1. Depth = 3.
+Check the available operands for the infix binary operator, there should be one with a depth of (Depth - 1) (2).
+The top operand on the operand stack is <ID> (2), it has the correct depth, so the OP_AND operator has one of its required operands. We'll check the second operand when we collapse the expression.
+The operator stack is not empty, so we need to calculate operator precedence.
+An OP_AND operator has a higher precedence than an OP_OR operator.
+Push the operator onto the operator stack (with new depth).
+
+Step: 6
+Depth: 3
+Next Token: < ( > (OP_LP)
+
++----------------+---------------+
+| Operator Stack | Operand Stack |
++----------------+---------------+
+| < ( > (1)      | <ID> (1)      |
+| < + > (2)      | <ID> (2)      |
+| < * > (3)      |               |
++----------------+---------------+
+
+This token is a unary prefix operator (takes one operand, directly after).
+An LP operator increments depth by 1. Depth = 4.
+Check the available operand(s) for the infix binary operator
+We'll check the operand when we collapse the expression.
+The operator stack is not empty, so we need to calculate operator precedence.
+An LP operator has a higher precedence than a logical AND operator (and indeed, any operator).
+Push the operator onto the operator stack (with new depth).
+
+Step: 7
+Depth: 4
+Next Token: < ~ > (logical NOT operator)
+
++----------------+---------------+
+| Operator Stack | Operand Stack |
++----------------+---------------+
+| < ( > (1)      | <ID> (1)      |
+| < + > (2)      | <ID> (2)      |
+| < * > (3)      |               |
+| < ( > (4)      |               |
++----------------+---------------+
+
+This token is a unary prefix operator (takes one operand, directly after).
+The NOT operator increments depth by 1.
+The operator stack is not empty, so we need to calculate operator precedence.
+A left parenthesis has a higher precedence than a logical AND operator.
+Push the operator onto the operator stack (with new depth).
+
+Step: 8
+Depth: 5
+Next Token: <ID> (variable name)
+
++----------------+---------------+
+| Operator Stack | Operand Stack |
++----------------+---------------+
+| < ( > (1)      | <ID> (1)      |
+| < + > (2)      | <ID> (2)      |
+| < * > (3)      |               |
+| < ( > (4)      |               |
+| < ~ > (5)      |               |
++----------------+---------------+
+
+This token is an operand.
+The ID operand leaves depth unchanged.
+Push the operand onto the operand stack (using the current depth).
+
+Step: 9
+Depth: 5
+Next Token: < * > (OP_AND)
+
++----------------+---------------+
+| Operator Stack | Operand Stack |
++----------------+---------------+
+| < ( > (1)      | <ID> (1)      |
+| < + > (2)      | <ID> (2)      |
+| < * > (3)      | <ID> (5)      |
+| < ( > (4)      |               |
+| < ~ > (5)      |               |
++----------------+---------------+
+
+This token is an binary infix operator (takes 2 parameters, one directly before and one directly after)
+An OP_OR operator increments depth by 1. Depth = 6.
+Check the available operands for the binary infix operator, there should be one with a depth of (Depth - 1) (5).
+The top operand on the operand stack is <ID> (5), it has the correct depth, so the OP_AND operator has one of its required arguments. We'll check the second when we collapse the expression.
+The operator stack is not empty, so we need to calculate operator precedence.
+The operator on the top of the operator stack it OP_LP.
+An OP_LP is ignored by all operators following it except OP_RP.
+Push the operator onto the operator stack (with new depth).
+
+Step: 10
+Depth: 6
+Next Token: < ( > (OP_LP)
+
++----------------+---------------+
+| Operator Stack | Operand Stack |
++----------------+---------------+
+| < ( > (1)      | <ID> (1)      |
+| < + > (2)      | <ID> (2)      |
+| < * > (3)      | <ID> (5)      |
+| < ( > (4)      |               |
+| < ~ > (5)      |               |
+| < * > (6)      |               |
++----------------+---------------+
+
+Check the type of the token:
+	An OP_LP is a unary prefix operator. It expects a single operand after itself.
+An LP operator increments depth by 1. Depth = 7.
+Check the available operand(s) for the this operator:
+	The presence of the following operand will be verified when the expression is collapsed.
+The operator stack is not empty, so we need to calculate operator precedence.
+An LP operator has a higher precedence than a logical AND operator (and indeed, any operator).
+Push the operator onto the operator stack (with new depth).
+
+
+
+
+
+
+
+Expression String
+(a+b*(~c*(d^c+b)+a)*d)
+Infix Token Stream
+< ( >
+<ID>
+< + >
+<ID>
+< * >
+< ( >
+< ~ >
+<ID>
+< * >
+< ( ><ID>< ^ ><ID>< + ><ID>< ) >< + ><ID>< ) >< * ><ID>< ) ><EOL>
+Postfix Token Stream
+<ID><ID><ID>< ~ ><ID><ID>< ^ ><ID>< + >< * ><ID>< + >< * ><ID>< * >< + ><EOL>
