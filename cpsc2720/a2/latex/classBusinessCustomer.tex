@@ -1,0 +1,98 @@
+\hypertarget{classBusinessCustomer}{
+\section{BusinessCustomer Class Reference}
+\label{classBusinessCustomer}\index{BusinessCustomer@{BusinessCustomer}}
+}
+A simple class to represent a \hyperlink{classBusinessCustomer}{BusinessCustomer} who IS A \hyperlink{classCustomer}{Customer}.  
+
+
+{\tt \#include $<$businessCustomer.h$>$}
+
+Inheritance diagram for BusinessCustomer::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classBusinessCustomer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classBusinessCustomer_c8a0dcdb32d7a866c7383824889bfbae}{BusinessCustomer} (const string \&name=\char`\"{}UNKNOWN\char`\"{}, const string \&reg=\char`\"{}000000000\char`\"{})
+\begin{CompactList}\small\item\em Create a business customer with a name, and registration number. \item\end{CompactList}\item 
+virtual \hyperlink{classCustomer}{Customer} $\ast$ \hyperlink{classBusinessCustomer_6aaf68c4c9f64ed6cbb24855664d7244}{clone} () const 
+\begin{CompactList}\small\item\em return a copy of yourself \item\end{CompactList}\item 
+virtual istream \& \hyperlink{classBusinessCustomer_2c5cee8ad65d72e620a32f10e99b823d}{read} (istream \&is)  throw (input\_\-format\_\-error)
+\begin{CompactList}\small\item\em Reads the information for a business customer from a stream. \item\end{CompactList}\item 
+virtual ostream \& \hyperlink{classBusinessCustomer_2ea38f4b72488c8e9d7f7c38ed93b454}{write} (ostream \&os) const 
+\begin{CompactList}\small\item\em Writes the information for a business customer to a stream. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBusinessCustomer_c8a0dcdb32d7a866c7383824889bfbae}{
+\index{BusinessCustomer@{BusinessCustomer}!BusinessCustomer@{BusinessCustomer}}
+\index{BusinessCustomer@{BusinessCustomer}!BusinessCustomer@{BusinessCustomer}}
+\subsubsection[BusinessCustomer]{\setlength{\rightskip}{0pt plus 5cm}BusinessCustomer::BusinessCustomer (const string \& {\em name} = {\tt \char`\"{}UNKNOWN\char`\"{}}, \/  const string \& {\em reg} = {\tt \char`\"{}000000000\char`\"{}})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classBusinessCustomer_c8a0dcdb32d7a866c7383824889bfbae}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftarrow$} {\em name}]this business customer's name; defaults to {\bf UNKNOWN} \item[\mbox{$\leftarrow$} {\em reg}]this business customer's registration number; defaults to 000000000 \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBusinessCustomer_6aaf68c4c9f64ed6cbb24855664d7244}{
+\index{BusinessCustomer@{BusinessCustomer}!clone@{clone}}
+\index{clone@{clone}!BusinessCustomer@{BusinessCustomer}}
+\subsubsection[clone]{\setlength{\rightskip}{0pt plus 5cm}{\bf Customer} $\ast$ BusinessCustomer::clone () const\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classBusinessCustomer_6aaf68c4c9f64ed6cbb24855664d7244}
+
+
+\begin{Desc}
+\item[Returns:]a pointer to a copy of a \hyperlink{classBusinessCustomer}{BusinessCustomer} \end{Desc}
+
+
+Implements \hyperlink{classCustomer_406fb74a887e5f0eb91aa49301534bb4}{Customer}.\hypertarget{classBusinessCustomer_2c5cee8ad65d72e620a32f10e99b823d}{
+\index{BusinessCustomer@{BusinessCustomer}!read@{read}}
+\index{read@{read}!BusinessCustomer@{BusinessCustomer}}
+\subsubsection[read]{\setlength{\rightskip}{0pt plus 5cm}istream \& BusinessCustomer::read (istream \& {\em is})  throw (input\_\-format\_\-error)\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classBusinessCustomer_2c5cee8ad65d72e620a32f10e99b823d}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em is}]the stream to read from and the updated stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em thrown}]if the account number is incorrectly written \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+
+
+Implements \hyperlink{classCustomer_3327c4e5e7f3a9435f3b71372778386a}{Customer}.\hypertarget{classBusinessCustomer_2ea38f4b72488c8e9d7f7c38ed93b454}{
+\index{BusinessCustomer@{BusinessCustomer}!write@{write}}
+\index{write@{write}!BusinessCustomer@{BusinessCustomer}}
+\subsubsection[write]{\setlength{\rightskip}{0pt plus 5cm}ostream \& BusinessCustomer::write (ostream \& {\em os}) const\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classBusinessCustomer_2ea38f4b72488c8e9d7f7c38ed93b454}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em os}]the stream to write to and the updated stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+
+
+Implements \hyperlink{classCustomer_a4ef104426d09a4817cb2d55e5e674d0}{Customer}.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+\hyperlink{businessCustomer_8h}{businessCustomer.h}\item 
+\hyperlink{businessCustomer_8cc}{businessCustomer.cc}\end{CompactItemize}

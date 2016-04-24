@@ -1,0 +1,174 @@
+\hypertarget{classChequingAccount}{
+\section{ChequingAccount Class Reference}
+\label{classChequingAccount}\index{ChequingAccount@{ChequingAccount}}
+}
+A simple abstract base class to represent a \hyperlink{classChequingAccount}{ChequingAccount}.  
+
+
+{\tt \#include $<$chequingAccount.h$>$}
+
+Inheritance diagram for ChequingAccount::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classChequingAccount}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classChequingAccount_abe675fa503c8abfdee3913d35b52197}{ChequingAccount} (int numFree=0, int howMany=0, int fee=0)
+\begin{CompactList}\small\item\em default constructor \item\end{CompactList}\item 
+virtual istream \& \hyperlink{classChequingAccount_b0aaf92f019e79f95c39a0f6996acbf5}{read} (istream \&is)  throw (input\_\-format\_\-error)
+\begin{CompactList}\small\item\em Reads all information for a chequing account, from a stream. \item\end{CompactList}\item 
+virtual ostream \& \hyperlink{classChequingAccount_b85b405548099388a5d7866ed9065d33}{write} (ostream \&os) const 
+\begin{CompactList}\small\item\em Writes all information for a chequing account, to a stream. \item\end{CompactList}\item 
+virtual void \hyperlink{classChequingAccount_14b54359ca8a5260b7decf0aa9bb04d2}{withdraw} (int amount)  throw (insufficient\_\-funds)
+\begin{CompactList}\small\item\em Withdraws {\em amount\/} from this account. \item\end{CompactList}\item 
+virtual void \hyperlink{classChequingAccount_03a0e06869ce9180c4e7ef2fdb39e616}{updateMonthEnd} ()
+\begin{CompactList}\small\item\em Performs updates to the account at the end of the month. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+virtual istream \& \hyperlink{classChequingAccount_09de2d9912d5f817b651659404549111}{readExtra} (istream \&is)
+\begin{CompactList}\small\item\em Reads the information,specific to a chequing account, from a stream. \item\end{CompactList}\item 
+virtual ostream \& \hyperlink{classChequingAccount_5f2831100ca8357b9d74a1402477f3f6}{writeExtra} (ostream \&os) const 
+\begin{CompactList}\small\item\em Writes the information, specific to a chequing account, to a stream. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classChequingAccount_abe675fa503c8abfdee3913d35b52197}{
+\index{ChequingAccount@{ChequingAccount}!ChequingAccount@{ChequingAccount}}
+\index{ChequingAccount@{ChequingAccount}!ChequingAccount@{ChequingAccount}}
+\subsubsection[ChequingAccount]{\setlength{\rightskip}{0pt plus 5cm}ChequingAccount::ChequingAccount (int {\em numFree} = {\tt 0}, \/  int {\em howMany} = {\tt 0}, \/  int {\em fee} = {\tt 0})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classChequingAccount_abe675fa503c8abfdee3913d35b52197}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em numFree}]imports the number of free withdrawals allowed \item[{\em howMany}]imports the number of withdrawals made \item[{\em fee}]imports the fee to be charged for a withdrawal \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classChequingAccount_b0aaf92f019e79f95c39a0f6996acbf5}{
+\index{ChequingAccount@{ChequingAccount}!read@{read}}
+\index{read@{read}!ChequingAccount@{ChequingAccount}}
+\subsubsection[read]{\setlength{\rightskip}{0pt plus 5cm}istream \& ChequingAccount::read (istream \& {\em is})  throw (input\_\-format\_\-error)\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classChequingAccount_b0aaf92f019e79f95c39a0f6996acbf5}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em is}]the stream to read from and the updated stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em thrown}]from account::read() \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+
+
+Reimplemented from \hyperlink{classAccount_1ef84736fe231b64547ba0b7824ac7c6}{Account}.
+
+Reimplemented in \hyperlink{classChequingSavingsAccount_c0de0e2d3ac55227f31a4715ae257646}{ChequingSavingsAccount}.
+
+References Account::read().\hypertarget{classChequingAccount_b85b405548099388a5d7866ed9065d33}{
+\index{ChequingAccount@{ChequingAccount}!write@{write}}
+\index{write@{write}!ChequingAccount@{ChequingAccount}}
+\subsubsection[write]{\setlength{\rightskip}{0pt plus 5cm}ostream \& ChequingAccount::write (ostream \& {\em os}) const\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classChequingAccount_b85b405548099388a5d7866ed9065d33}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em os}]the stream to write to and the updated stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+
+
+Reimplemented from \hyperlink{classAccount_65f80b996aecc07bcb5ddd31fcb0b063}{Account}.
+
+Reimplemented in \hyperlink{classChequingSavingsAccount_61888979bbaf273b2c20f92d2f41f226}{ChequingSavingsAccount}.
+
+References Account::write(), and writeExtra().\hypertarget{classChequingAccount_14b54359ca8a5260b7decf0aa9bb04d2}{
+\index{ChequingAccount@{ChequingAccount}!withdraw@{withdraw}}
+\index{withdraw@{withdraw}!ChequingAccount@{ChequingAccount}}
+\subsubsection[withdraw]{\setlength{\rightskip}{0pt plus 5cm}void ChequingAccount::withdraw (int {\em amount})  throw (insufficient\_\-funds)\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classChequingAccount_14b54359ca8a5260b7decf0aa9bb04d2}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftarrow$} {\em amount}]imports the amount to be withdrawn \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em thrown}]if the balance is less than the desired amount \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondition:]the balance has been increased by amount plus any service charges \end{Desc}
+
+
+Reimplemented from \hyperlink{classAccount_d239379460e2b8975bc8472514768850}{Account}.
+
+References Account::balance.\hypertarget{classChequingAccount_03a0e06869ce9180c4e7ef2fdb39e616}{
+\index{ChequingAccount@{ChequingAccount}!updateMonthEnd@{updateMonthEnd}}
+\index{updateMonthEnd@{updateMonthEnd}!ChequingAccount@{ChequingAccount}}
+\subsubsection[updateMonthEnd]{\setlength{\rightskip}{0pt plus 5cm}void ChequingAccount::updateMonthEnd ()\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classChequingAccount_03a0e06869ce9180c4e7ef2fdb39e616}
+
+
+\begin{Desc}
+\item[Postcondition:]the number of withdrawals has been set to 0 \end{Desc}
+
+
+Implements \hyperlink{classAccount_3823d2d885625b78f83088946c257697}{Account}.
+
+Reimplemented in \hyperlink{classChequingSavingsAccount_0bbd0c3b03b968fc2f80eb2a4fffa3f2}{ChequingSavingsAccount}.
+
+Referenced by ChequingSavingsAccount::updateMonthEnd().\hypertarget{classChequingAccount_09de2d9912d5f817b651659404549111}{
+\index{ChequingAccount@{ChequingAccount}!readExtra@{readExtra}}
+\index{readExtra@{readExtra}!ChequingAccount@{ChequingAccount}}
+\subsubsection[readExtra]{\setlength{\rightskip}{0pt plus 5cm}istream \& ChequingAccount::readExtra (istream \& {\em is})\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classChequingAccount_09de2d9912d5f817b651659404549111}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em is}]the stream to read from and the updated stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+
+
+Referenced by ChequingSavingsAccount::read().\hypertarget{classChequingAccount_5f2831100ca8357b9d74a1402477f3f6}{
+\index{ChequingAccount@{ChequingAccount}!writeExtra@{writeExtra}}
+\index{writeExtra@{writeExtra}!ChequingAccount@{ChequingAccount}}
+\subsubsection[writeExtra]{\setlength{\rightskip}{0pt plus 5cm}ostream \& ChequingAccount::writeExtra (ostream \& {\em os}) const\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classChequingAccount_5f2831100ca8357b9d74a1402477f3f6}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em os}]the stream to write to and the updated stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+
+
+Referenced by ChequingSavingsAccount::write(), and write().
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+\hyperlink{chequingAccount_8h}{chequingAccount.h}\item 
+\hyperlink{chequingAccount_8cc}{chequingAccount.cc}\end{CompactItemize}

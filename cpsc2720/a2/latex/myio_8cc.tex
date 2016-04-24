@@ -1,0 +1,136 @@
+\hypertarget{myio_8cc}{
+\section{myio.cc File Reference}
+\label{myio_8cc}\index{myio.cc@{myio.cc}}
+}
+implementation file for a library of auxiliary IO functions 
+
+{\tt \#include $<$iostream$>$}\par
+{\tt \#include $<$fstream$>$}\par
+{\tt \#include $<$string$>$}\par
+{\tt \#include \char`\"{}myio.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{myio_8cc_dad47fe318706783f22820e48a42962a}{clrStream} ()
+\begin{CompactList}\small\item\em Remove all data from the cin stream up to and including the next new line character. \item\end{CompactList}\item 
+char \hyperlink{myio_8cc_fcf3b9310ecbc7969bba065cb3e29e0d}{getResponse} (char defalt)
+\begin{CompactList}\small\item\em Get a character from the cin stream. \item\end{CompactList}\item 
+void \hyperlink{myio_8cc_547733d9f28b6031d26e78df51e69831}{getValid} (int \&i)
+\begin{CompactList}\small\item\em obtain a valid integer from the user \item\end{CompactList}\item 
+void \hyperlink{myio_8cc_a26df60c8d25f135490e910422c078a5}{getValid} (double \&x)
+\begin{CompactList}\small\item\em obtain a valid real number from the user \item\end{CompactList}\item 
+void \hyperlink{myio_8cc_1f837e55be77da306d34936debe80189}{openIn} (ifstream \&iStr, string \&filename)  throw (invalid\_\-file)
+\begin{CompactList}\small\item\em Attach a file to a stream. \item\end{CompactList}\item 
+void \hyperlink{myio_8cc_690786b6f462b33d1cec1cd350a73dff}{openOut} (ofstream \&oStr, string \&filename)  throw (invalid\_\-file)
+\begin{CompactList}\small\item\em Attach a file to a stream. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Author:]Jacob Pledger (using Rex's Solution) \end{Desc}
+\begin{Desc}
+\item[Date:]Nov 6, 2009 \end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{myio_8cc_dad47fe318706783f22820e48a42962a}{
+\index{myio.cc@{myio.cc}!clrStream@{clrStream}}
+\index{clrStream@{clrStream}!myio.cc@{myio.cc}}
+\subsubsection[clrStream]{\setlength{\rightskip}{0pt plus 5cm}void clrStream ()}}
+\label{myio_8cc_dad47fe318706783f22820e48a42962a}
+
+
+\begin{Desc}
+\item[Postcondition:]all data up to and including the next new line char is removed from cin \end{Desc}
+
+
+Referenced by getResponse(), getValid(), and menuSelect().\hypertarget{myio_8cc_fcf3b9310ecbc7969bba065cb3e29e0d}{
+\index{myio.cc@{myio.cc}!getResponse@{getResponse}}
+\index{getResponse@{getResponse}!myio.cc@{myio.cc}}
+\subsubsection[getResponse]{\setlength{\rightskip}{0pt plus 5cm}char getResponse (char {\em defalt})}}
+\label{myio_8cc_fcf3b9310ecbc7969bba065cb3e29e0d}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftarrow$} {\em defalt}]imports the default character to use if the enter key is pressed \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]{\em defalt\/} if the next character in the cin stream is a new line, otherwise returns the character entered \end{Desc}
+\begin{Desc}
+\item[Postcondition:]the cin stream is cleared \end{Desc}
+
+
+References clrStream().\hypertarget{myio_8cc_a26df60c8d25f135490e910422c078a5}{
+\index{myio.cc@{myio.cc}!getValid@{getValid}}
+\index{getValid@{getValid}!myio.cc@{myio.cc}}
+\subsubsection[getValid]{\setlength{\rightskip}{0pt plus 5cm}void getValid (double \& {\em x})}}
+\label{myio_8cc_a26df60c8d25f135490e910422c078a5}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\rightarrow$} {\em x}]exports the number obtained \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondition:]{\em x\/} will be a valid real number \end{Desc}
+
+
+References clrStream().\hypertarget{myio_8cc_547733d9f28b6031d26e78df51e69831}{
+\index{myio.cc@{myio.cc}!getValid@{getValid}}
+\index{getValid@{getValid}!myio.cc@{myio.cc}}
+\subsubsection[getValid]{\setlength{\rightskip}{0pt plus 5cm}void getValid (int \& {\em i})}}
+\label{myio_8cc_547733d9f28b6031d26e78df51e69831}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\rightarrow$} {\em i}]exports the integer obtained \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondition:]{\em i\/} will be a valid integer \end{Desc}
+
+
+References clrStream().\hypertarget{myio_8cc_1f837e55be77da306d34936debe80189}{
+\index{myio.cc@{myio.cc}!openIn@{openIn}}
+\index{openIn@{openIn}!myio.cc@{myio.cc}}
+\subsubsection[openIn]{\setlength{\rightskip}{0pt plus 5cm}void openIn (ifstream \& {\em iStr}, \/  string \& {\em filename})  throw (invalid\_\-file)}}
+\label{myio_8cc_1f837e55be77da306d34936debe80189}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\rightarrow$} {\em iStr}]exports the stream that the file was attached to \item[\mbox{$\leftrightarrow$} {\em filename}]imports the name of the file to be opened and exports the name of the file that was opened \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em thrown}]if the user enters an unusable filename, or the program cannot open the file \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondition:]{\em iStr\/} is attached to a valid file, ready for extraction \end{Desc}
+
+
+Referenced by fill().\hypertarget{myio_8cc_690786b6f462b33d1cec1cd350a73dff}{
+\index{myio.cc@{myio.cc}!openOut@{openOut}}
+\index{openOut@{openOut}!myio.cc@{myio.cc}}
+\subsubsection[openOut]{\setlength{\rightskip}{0pt plus 5cm}void openOut (ofstream \& {\em oStr}, \/  string \& {\em filename})  throw (invalid\_\-file)}}
+\label{myio_8cc_690786b6f462b33d1cec1cd350a73dff}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\rightarrow$} {\em oStr}]exports the stream that the file was attached to \item[\mbox{$\leftrightarrow$} {\em filename}]imports the name of the file to be opened and exports the name of the file that was opened \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em thrown}]if the user enters an unusable filename, or the program cannot open the file \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondition:]{\em oStr\/} is attached to a valid file, ready for insertion \end{Desc}

@@ -1,0 +1,62 @@
+\hypertarget{account_8cc}{
+\section{account.cc File Reference}
+\label{account_8cc}\index{account.cc@{account.cc}}
+}
+Implementation file for the account class. 
+
+{\tt \#include $<$cctype$>$}\par
+{\tt \#include $<$iostream$>$}\par
+{\tt \#include \char`\"{}account.h\char`\"{}}\par
+{\tt \#include \char`\"{}customer.h\char`\"{}}\par
+{\tt \#include \char`\"{}personalCustomer.h\char`\"{}}\par
+{\tt \#include \char`\"{}businessCustomer.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+istream \& \hyperlink{account_8cc_bb9de5d9488de397fa797b8b99e620b8}{operator$>$$>$} (istream \&is, \hyperlink{classAccount}{Account} \&a)
+\begin{CompactList}\small\item\em overload the extraction operator \item\end{CompactList}\item 
+ostream \& \hyperlink{account_8cc_0b243d70a13998e17509cef92d97c229}{operator$<$$<$} (ostream \&os, const \hyperlink{classAccount}{Account} \&a)
+\begin{CompactList}\small\item\em overload the insertion operator \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Author:]Jacob Pledger (using Rex's solution) \end{Desc}
+\begin{Desc}
+\item[Date:]Sept 24, 2009 \end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{account_8cc_0b243d70a13998e17509cef92d97c229}{
+\index{account.cc@{account.cc}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!account.cc@{account.cc}}
+\subsubsection[operator$<$$<$]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf Account} \& {\em a})}}
+\label{account_8cc_0b243d70a13998e17509cef92d97c229}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em os}]the stream to read from and the updated stream \item[\mbox{$\leftarrow$} {\em a}]the account to be inserted into the stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+
+
+References Account::write().\hypertarget{account_8cc_bb9de5d9488de397fa797b8b99e620b8}{
+\index{account.cc@{account.cc}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!account.cc@{account.cc}}
+\subsubsection[operator$>$$>$]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (istream \& {\em is}, \/  {\bf Account} \& {\em a})}}
+\label{account_8cc_bb9de5d9488de397fa797b8b99e620b8}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em is}]the stream to read from and the updated stream \item[\mbox{$\rightarrow$} {\em a}]the account to be extracted from the stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+
+
+References Account::read().

@@ -1,0 +1,167 @@
+\hypertarget{classSavingsAccount}{
+\section{SavingsAccount Class Reference}
+\label{classSavingsAccount}\index{SavingsAccount@{SavingsAccount}}
+}
+A simple abstract base class to represent a \hyperlink{classSavingsAccount}{SavingsAccount}.  
+
+
+{\tt \#include $<$savingsAccount.h$>$}
+
+Inheritance diagram for SavingsAccount::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classSavingsAccount}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classSavingsAccount_b7517ac4a985dc029f2587109c984482}{SavingsAccount} (double rate=0.0)
+\begin{CompactList}\small\item\em default constructor \item\end{CompactList}\item 
+virtual istream \& \hyperlink{classSavingsAccount_a738133ea37093f4e0ae9d3a6dc14674}{read} (istream \&is)  throw (input\_\-format\_\-error)
+\begin{CompactList}\small\item\em Reads all information for a savings account, from a stream. \item\end{CompactList}\item 
+virtual ostream \& \hyperlink{classSavingsAccount_7010b1663ff729cb05a3594c7bc8ae99}{write} (ostream \&os) const 
+\begin{CompactList}\small\item\em Writes all information for a savings account, to a stream. \item\end{CompactList}\item 
+virtual void \hyperlink{classSavingsAccount_fedffc6bb917570025ac1e30db9e4f76}{updateMonthEnd} ()
+\begin{CompactList}\small\item\em Performs updates to the account at the end of the month. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+virtual istream \& \hyperlink{classSavingsAccount_3afc54ec8471fb44d804750ebe63e1c9}{readExtra} (istream \&is)
+\begin{CompactList}\small\item\em Reads the information,specific to savings account, from a stream. \item\end{CompactList}\item 
+virtual ostream \& \hyperlink{classSavingsAccount_6a2fce79d1bde2580c291847ec1cf989}{writeExtra} (ostream \&os) const 
+\begin{CompactList}\small\item\em Writes the information, specific to a savings account, to a stream. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{classSavingsAccount_de464fb646c70277052a60e9d098f511}{
+double \hyperlink{classSavingsAccount_de464fb646c70277052a60e9d098f511}{interestRate}}
+\label{classSavingsAccount_de464fb646c70277052a60e9d098f511}
+
+\begin{CompactList}\small\item\em The monthly interest rate as a percentage. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSavingsAccount_b7517ac4a985dc029f2587109c984482}{
+\index{SavingsAccount@{SavingsAccount}!SavingsAccount@{SavingsAccount}}
+\index{SavingsAccount@{SavingsAccount}!SavingsAccount@{SavingsAccount}}
+\subsubsection[SavingsAccount]{\setlength{\rightskip}{0pt plus 5cm}SavingsAccount::SavingsAccount (double {\em rate} = {\tt 0.0})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classSavingsAccount_b7517ac4a985dc029f2587109c984482}
+
+
+Create a savings account with the specified interest rate
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em rate}]imports the monthly interest rate as a percentage \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classSavingsAccount_a738133ea37093f4e0ae9d3a6dc14674}{
+\index{SavingsAccount@{SavingsAccount}!read@{read}}
+\index{read@{read}!SavingsAccount@{SavingsAccount}}
+\subsubsection[read]{\setlength{\rightskip}{0pt plus 5cm}istream \& SavingsAccount::read (istream \& {\em is})  throw (input\_\-format\_\-error)\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classSavingsAccount_a738133ea37093f4e0ae9d3a6dc14674}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em is}]the stream to read from and the updated stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em thrown}]when the input cannot be correctly interpreted \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+
+
+Reimplemented from \hyperlink{classAccount_1ef84736fe231b64547ba0b7824ac7c6}{Account}.
+
+Reimplemented in \hyperlink{classChequingSavingsAccount_c0de0e2d3ac55227f31a4715ae257646}{ChequingSavingsAccount}.
+
+References Account::read().\hypertarget{classSavingsAccount_7010b1663ff729cb05a3594c7bc8ae99}{
+\index{SavingsAccount@{SavingsAccount}!write@{write}}
+\index{write@{write}!SavingsAccount@{SavingsAccount}}
+\subsubsection[write]{\setlength{\rightskip}{0pt plus 5cm}ostream \& SavingsAccount::write (ostream \& {\em os}) const\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classSavingsAccount_7010b1663ff729cb05a3594c7bc8ae99}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em os}]the stream to write to and the updated stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+
+
+Reimplemented from \hyperlink{classAccount_65f80b996aecc07bcb5ddd31fcb0b063}{Account}.
+
+Reimplemented in \hyperlink{classChequingSavingsAccount_61888979bbaf273b2c20f92d2f41f226}{ChequingSavingsAccount}.
+
+References Account::write(), and writeExtra().\hypertarget{classSavingsAccount_fedffc6bb917570025ac1e30db9e4f76}{
+\index{SavingsAccount@{SavingsAccount}!updateMonthEnd@{updateMonthEnd}}
+\index{updateMonthEnd@{updateMonthEnd}!SavingsAccount@{SavingsAccount}}
+\subsubsection[updateMonthEnd]{\setlength{\rightskip}{0pt plus 5cm}void SavingsAccount::updateMonthEnd ()\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classSavingsAccount_fedffc6bb917570025ac1e30db9e4f76}
+
+
+This function will calculate and add the interest earned to the balance at the end of the month.
+
+\begin{Desc}
+\item[Postcondition:]the balance is increased by the amount of interest earned \end{Desc}
+
+
+Implements \hyperlink{classAccount_3823d2d885625b78f83088946c257697}{Account}.
+
+Reimplemented in \hyperlink{classChequingSavingsAccount_0bbd0c3b03b968fc2f80eb2a4fffa3f2}{ChequingSavingsAccount}.
+
+References Account::balance, and interestRate.
+
+Referenced by ChequingSavingsAccount::updateMonthEnd().\hypertarget{classSavingsAccount_3afc54ec8471fb44d804750ebe63e1c9}{
+\index{SavingsAccount@{SavingsAccount}!readExtra@{readExtra}}
+\index{readExtra@{readExtra}!SavingsAccount@{SavingsAccount}}
+\subsubsection[readExtra]{\setlength{\rightskip}{0pt plus 5cm}istream \& SavingsAccount::readExtra (istream \& {\em is})\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classSavingsAccount_3afc54ec8471fb44d804750ebe63e1c9}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em is}]the stream to read from and the updated stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+
+
+References interestRate.
+
+Referenced by ChequingSavingsAccount::read().\hypertarget{classSavingsAccount_6a2fce79d1bde2580c291847ec1cf989}{
+\index{SavingsAccount@{SavingsAccount}!writeExtra@{writeExtra}}
+\index{writeExtra@{writeExtra}!SavingsAccount@{SavingsAccount}}
+\subsubsection[writeExtra]{\setlength{\rightskip}{0pt plus 5cm}ostream \& SavingsAccount::writeExtra (ostream \& {\em os}) const\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classSavingsAccount_6a2fce79d1bde2580c291847ec1cf989}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em os}]the stream to write to and the updated stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+
+
+References interestRate.
+
+Referenced by write(), and ChequingSavingsAccount::write().
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+\hyperlink{savingsAccount_8h}{savingsAccount.h}\item 
+\hyperlink{savingsAccount_8cc}{savingsAccount.cc}\end{CompactItemize}

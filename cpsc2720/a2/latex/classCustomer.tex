@@ -1,0 +1,91 @@
+\hypertarget{classCustomer}{
+\section{Customer Class Reference}
+\label{classCustomer}\index{Customer@{Customer}}
+}
+A simple abstract base class to represent a \hyperlink{classCustomer}{Customer}.  
+
+
+{\tt \#include $<$customer.h$>$}
+
+Inheritance diagram for Customer::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classCustomer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+virtual \hyperlink{classCustomer_7784915654b180d09696edded3db913d}{$\sim$Customer} ()
+\begin{CompactList}\small\item\em Virtual destructor. \item\end{CompactList}\item 
+virtual \hyperlink{classCustomer}{Customer} $\ast$ \hyperlink{classCustomer_406fb74a887e5f0eb91aa49301534bb4}{clone} () const =0
+\begin{CompactList}\small\item\em return a copy of yourself \item\end{CompactList}\item 
+virtual istream \& \hyperlink{classCustomer_3327c4e5e7f3a9435f3b71372778386a}{read} (istream \&is)=0
+\begin{CompactList}\small\item\em Reads the information for a \hyperlink{classCustomer}{Customer} from a stream. \item\end{CompactList}\item 
+virtual ostream \& \hyperlink{classCustomer_a4ef104426d09a4817cb2d55e5e674d0}{write} (ostream \&os) const =0
+\begin{CompactList}\small\item\em Writes the information for a \hyperlink{classCustomer}{Customer} to a stream. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCustomer_7784915654b180d09696edded3db913d}{
+\index{Customer@{Customer}!$\sim$Customer@{$\sim$Customer}}
+\index{$\sim$Customer@{$\sim$Customer}!Customer@{Customer}}
+\subsubsection[$\sim$Customer]{\setlength{\rightskip}{0pt plus 5cm}virtual Customer::$\sim$Customer ()\hspace{0.3cm}{\tt  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classCustomer_7784915654b180d09696edded3db913d}
+
+
+This function does nothing. It is provided so that sub class objects are correctly destroyed 
+
+\subsection{Member Function Documentation}
+\hypertarget{classCustomer_406fb74a887e5f0eb91aa49301534bb4}{
+\index{Customer@{Customer}!clone@{clone}}
+\index{clone@{clone}!Customer@{Customer}}
+\subsubsection[clone]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Customer}$\ast$ Customer::clone () const\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{classCustomer_406fb74a887e5f0eb91aa49301534bb4}
+
+
+\begin{Desc}
+\item[Returns:]a pointer to a copy of the current customer \end{Desc}
+
+
+Implemented in \hyperlink{classBusinessCustomer_6aaf68c4c9f64ed6cbb24855664d7244}{BusinessCustomer}, and \hyperlink{classPersonalCustomer_a1e9e9e14356c0ff7a3d97c999e44388}{PersonalCustomer}.\hypertarget{classCustomer_3327c4e5e7f3a9435f3b71372778386a}{
+\index{Customer@{Customer}!read@{read}}
+\index{read@{read}!Customer@{Customer}}
+\subsubsection[read]{\setlength{\rightskip}{0pt plus 5cm}virtual istream\& Customer::read (istream \& {\em is})\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{classCustomer_3327c4e5e7f3a9435f3b71372778386a}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em is}]the stream to read from and the updated stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+
+
+Implemented in \hyperlink{classBusinessCustomer_2c5cee8ad65d72e620a32f10e99b823d}{BusinessCustomer}, and \hyperlink{classPersonalCustomer_81861fd3353273de8c4da5f273ecfd26}{PersonalCustomer}.
+
+Referenced by operator$>$$>$().\hypertarget{classCustomer_a4ef104426d09a4817cb2d55e5e674d0}{
+\index{Customer@{Customer}!write@{write}}
+\index{write@{write}!Customer@{Customer}}
+\subsubsection[write]{\setlength{\rightskip}{0pt plus 5cm}virtual ostream\& Customer::write (ostream \& {\em os}) const\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{classCustomer_a4ef104426d09a4817cb2d55e5e674d0}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em os}]the stream to write to and the updated stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+
+
+Implemented in \hyperlink{classBusinessCustomer_2ea38f4b72488c8e9d7f7c38ed93b454}{BusinessCustomer}, and \hyperlink{classPersonalCustomer_123975841172a6933c0358907d29f495}{PersonalCustomer}.
+
+Referenced by operator$<$$<$().
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+\hyperlink{customer_8h}{customer.h}\end{CompactItemize}

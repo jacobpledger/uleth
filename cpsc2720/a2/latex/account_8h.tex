@@ -1,0 +1,65 @@
+\hypertarget{account_8h}{
+\section{account.h File Reference}
+\label{account_8h}\index{account.h@{account.h}}
+}
+Interface file for the account class. 
+
+{\tt \#include $<$string$>$}\par
+{\tt \#include $<$iostream$>$}\par
+{\tt \#include \char`\"{}errors.h\char`\"{}}\par
+{\tt \#include \char`\"{}customer.h\char`\"{}}\par
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \hyperlink{classAccount}{Account}
+\begin{CompactList}\small\item\em A simple abstract base class to represent an \hyperlink{classAccount}{Account}. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+istream \& \hyperlink{account_8h_bb9de5d9488de397fa797b8b99e620b8}{operator$>$$>$} (istream \&is, \hyperlink{classAccount}{Account} \&a)
+\begin{CompactList}\small\item\em overload the extraction operator \item\end{CompactList}\item 
+ostream \& \hyperlink{account_8h_0b243d70a13998e17509cef92d97c229}{operator$<$$<$} (ostream \&os, const \hyperlink{classAccount}{Account} \&a)
+\begin{CompactList}\small\item\em overload the insertion operator \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Author:]Jacob Pledger (using Rex's solution) \end{Desc}
+\begin{Desc}
+\item[Date:]Sept 24, 2009 \end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{account_8h_0b243d70a13998e17509cef92d97c229}{
+\index{account.h@{account.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!account.h@{account.h}}
+\subsubsection[operator$<$$<$]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf Account} \& {\em a})}}
+\label{account_8h_0b243d70a13998e17509cef92d97c229}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em os}]the stream to read from and the updated stream \item[\mbox{$\leftarrow$} {\em a}]the account to be inserted into the stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+
+
+References Account::write().\hypertarget{account_8h_bb9de5d9488de397fa797b8b99e620b8}{
+\index{account.h@{account.h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!account.h@{account.h}}
+\subsubsection[operator$>$$>$]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (istream \& {\em is}, \/  {\bf Account} \& {\em a})}}
+\label{account_8h_bb9de5d9488de397fa797b8b99e620b8}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em is}]the stream to read from and the updated stream \item[\mbox{$\rightarrow$} {\em a}]the account to be extracted from the stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+
+
+References Account::read().

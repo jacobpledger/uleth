@@ -1,0 +1,192 @@
+\hypertarget{classAccount}{
+\section{Account Class Reference}
+\label{classAccount}\index{Account@{Account}}
+}
+A simple abstract base class to represent an \hyperlink{classAccount}{Account}.  
+
+
+{\tt \#include $<$account.h$>$}
+
+Inheritance diagram for Account::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classAccount}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classAccount_366660970b5eeb5c17436062327f1b14}{Account} ()
+\begin{CompactList}\small\item\em default constructor \item\end{CompactList}\item 
+\hyperlink{classAccount_a7427622a35446ddc6380ef8bcc7b98a}{Account} (const \hyperlink{classAccount}{Account} \&)
+\begin{CompactList}\small\item\em copy constructor \item\end{CompactList}\item 
+virtual \hyperlink{classAccount_569c9ef0e42b9157690b4ceb646daba8}{$\sim$Account} ()
+\begin{CompactList}\small\item\em Destructor; virtual so that sub class objects are correctly destroyed. \item\end{CompactList}\item 
+\hypertarget{classAccount_d9a32924b5b7e46bfe63e66ab2aed0cb}{
+\hyperlink{classAccount}{Account} \& \hyperlink{classAccount_d9a32924b5b7e46bfe63e66ab2aed0cb}{operator=} (const \hyperlink{classAccount}{Account} \&)}
+\label{classAccount_d9a32924b5b7e46bfe63e66ab2aed0cb}
+
+\begin{CompactList}\small\item\em Overload the assignment operator. \item\end{CompactList}\item 
+virtual istream \& \hyperlink{classAccount_1ef84736fe231b64547ba0b7824ac7c6}{read} (istream \&is)  throw (input\_\-format\_\-error)
+\begin{CompactList}\small\item\em Reads the information for an account from a stream. \item\end{CompactList}\item 
+virtual ostream \& \hyperlink{classAccount_65f80b996aecc07bcb5ddd31fcb0b063}{write} (ostream \&os) const 
+\begin{CompactList}\small\item\em Writes the information for an account to a stream. \item\end{CompactList}\item 
+virtual void \hyperlink{classAccount_d9f00408dc17914efb4fa4a3dadfd73f}{deposit} (int amount)
+\begin{CompactList}\small\item\em Deposits {\em amount\/} into this account. \item\end{CompactList}\item 
+virtual void \hyperlink{classAccount_d239379460e2b8975bc8472514768850}{withdraw} (int amount)  throw (insufficient\_\-funds)
+\begin{CompactList}\small\item\em Withdraws {\em amount\/} from this account. \item\end{CompactList}\item 
+\hypertarget{classAccount_3823d2d885625b78f83088946c257697}{
+virtual void \hyperlink{classAccount_3823d2d885625b78f83088946c257697}{updateMonthEnd} ()=0}
+\label{classAccount_3823d2d885625b78f83088946c257697}
+
+\begin{CompactList}\small\item\em Performs updates to the account at the end of the month. \item\end{CompactList}\item 
+string \hyperlink{classAccount_db8655dfb5f0d70eff938a414faaea31}{getAccountNumber} () const 
+\begin{CompactList}\small\item\em Returns the account number. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+\hypertarget{classAccount_6012cadbf02a6fd4c3f566a8b7ab9105}{
+int \hyperlink{classAccount_6012cadbf02a6fd4c3f566a8b7ab9105}{balance}}
+\label{classAccount_6012cadbf02a6fd4c3f566a8b7ab9105}
+
+\begin{CompactList}\small\item\em The balance in this account. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classAccount_366660970b5eeb5c17436062327f1b14}{
+\index{Account@{Account}!Account@{Account}}
+\index{Account@{Account}!Account@{Account}}
+\subsubsection[Account]{\setlength{\rightskip}{0pt plus 5cm}Account::Account ()\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classAccount_366660970b5eeb5c17436062327f1b14}
+
+
+creates an account with a 0 balance and no customer \hypertarget{classAccount_a7427622a35446ddc6380ef8bcc7b98a}{
+\index{Account@{Account}!Account@{Account}}
+\index{Account@{Account}!Account@{Account}}
+\subsubsection[Account]{\setlength{\rightskip}{0pt plus 5cm}Account::Account (const {\bf Account} \& {\em orig})}}
+\label{classAccount_a7427622a35446ddc6380ef8bcc7b98a}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em orig}]imports the \hyperlink{classAccount}{Account} to make a copy of \end{description}
+\end{Desc}
+\hypertarget{classAccount_569c9ef0e42b9157690b4ceb646daba8}{
+\index{Account@{Account}!$\sim$Account@{$\sim$Account}}
+\index{$\sim$Account@{$\sim$Account}!Account@{Account}}
+\subsubsection[$\sim$Account]{\setlength{\rightskip}{0pt plus 5cm}Account::$\sim$Account ()\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classAccount_569c9ef0e42b9157690b4ceb646daba8}
+
+
+clean up the \hyperlink{classCustomer}{Customer} pointer \begin{Desc}
+\item[Postcondition:]memory associated with the customer is returned to the heap \end{Desc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classAccount_1ef84736fe231b64547ba0b7824ac7c6}{
+\index{Account@{Account}!read@{read}}
+\index{read@{read}!Account@{Account}}
+\subsubsection[read]{\setlength{\rightskip}{0pt plus 5cm}istream \& Account::read (istream \& {\em is})  throw (input\_\-format\_\-error)\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classAccount_1ef84736fe231b64547ba0b7824ac7c6}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em is}]the stream to read from and the updated stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em thrown}]if the input does not start with a B or P or if the account number is of incorrect length \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+
+
+Reimplemented in \hyperlink{classChequingAccount_b0aaf92f019e79f95c39a0f6996acbf5}{ChequingAccount}, \hyperlink{classChequingSavingsAccount_c0de0e2d3ac55227f31a4715ae257646}{ChequingSavingsAccount}, and \hyperlink{classSavingsAccount_a738133ea37093f4e0ae9d3a6dc14674}{SavingsAccount}.
+
+References balance.
+
+Referenced by operator$>$$>$(), SavingsAccount::read(), ChequingSavingsAccount::read(), and ChequingAccount::read().\hypertarget{classAccount_65f80b996aecc07bcb5ddd31fcb0b063}{
+\index{Account@{Account}!write@{write}}
+\index{write@{write}!Account@{Account}}
+\subsubsection[write]{\setlength{\rightskip}{0pt plus 5cm}ostream \& Account::write (ostream \& {\em os}) const\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classAccount_65f80b996aecc07bcb5ddd31fcb0b063}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em os}]the stream to write to and the updated stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded\end{Desc}
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em os}]the stream to write to and the updated stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+
+
+Reimplemented in \hyperlink{classChequingAccount_b85b405548099388a5d7866ed9065d33}{ChequingAccount}, \hyperlink{classChequingSavingsAccount_61888979bbaf273b2c20f92d2f41f226}{ChequingSavingsAccount}, and \hyperlink{classSavingsAccount_7010b1663ff729cb05a3594c7bc8ae99}{SavingsAccount}.
+
+References balance.
+
+Referenced by operator$<$$<$(), SavingsAccount::write(), ChequingSavingsAccount::write(), and ChequingAccount::write().\hypertarget{classAccount_d9f00408dc17914efb4fa4a3dadfd73f}{
+\index{Account@{Account}!deposit@{deposit}}
+\index{deposit@{deposit}!Account@{Account}}
+\subsubsection[deposit]{\setlength{\rightskip}{0pt plus 5cm}void Account::deposit (int {\em amount})\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classAccount_d9f00408dc17914efb4fa4a3dadfd73f}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftarrow$} {\em amount}]imports the amount to be deposited\item[\mbox{$\leftarrow$} {\em amount}]imports the amount to be deposited \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondition:]the balance has been increased by amount \end{Desc}
+
+
+References balance.\hypertarget{classAccount_d239379460e2b8975bc8472514768850}{
+\index{Account@{Account}!withdraw@{withdraw}}
+\index{withdraw@{withdraw}!Account@{Account}}
+\subsubsection[withdraw]{\setlength{\rightskip}{0pt plus 5cm}void Account::withdraw (int {\em amount})  throw (insufficient\_\-funds)\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classAccount_d239379460e2b8975bc8472514768850}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftarrow$} {\em amount}]imports the amount to be withdrawn\item[\mbox{$\leftarrow$} {\em amount}]imports the amount to be withdrawn \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em thrown}]if the caller trys to withdraw more than available \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondition:]the balance has been decreased by amount \end{Desc}
+
+
+Reimplemented in \hyperlink{classChequingAccount_14b54359ca8a5260b7decf0aa9bb04d2}{ChequingAccount}.
+
+References balance.\hypertarget{classAccount_db8655dfb5f0d70eff938a414faaea31}{
+\index{Account@{Account}!getAccountNumber@{getAccountNumber}}
+\index{getAccountNumber@{getAccountNumber}!Account@{Account}}
+\subsubsection[getAccountNumber]{\setlength{\rightskip}{0pt plus 5cm}string Account::getAccountNumber () const}}
+\label{classAccount_db8655dfb5f0d70eff938a414faaea31}
+
+
+\begin{Desc}
+\item[Returns:]the account number \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+\hyperlink{account_8h}{account.h}\item 
+\hyperlink{account_8cc}{account.cc}\end{CompactItemize}

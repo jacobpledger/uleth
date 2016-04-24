@@ -1,0 +1,70 @@
+\hypertarget{customer_8h}{
+\section{customer.h File Reference}
+\label{customer_8h}\index{customer.h@{customer.h}}
+}
+Interface file for the \hyperlink{classCustomer}{Customer} class. 
+
+{\tt \#include $<$string$>$}\par
+{\tt \#include $<$iostream$>$}\par
+{\tt \#include \char`\"{}errors.h\char`\"{}}\par
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \hyperlink{classCustomer}{Customer}
+\begin{CompactList}\small\item\em A simple abstract base class to represent a \hyperlink{classCustomer}{Customer}. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+istream \& \hyperlink{customer_8h_936b0b1707ba931409c2cfd817696448}{operator$>$$>$} (istream \&is, \hyperlink{classCustomer}{Customer} \&c)
+\begin{CompactList}\small\item\em overload the extraction operator \item\end{CompactList}\item 
+ostream \& \hyperlink{customer_8h_c401f74b175499814fc5f425e9196cfc}{operator$<$$<$} (ostream \&os, const \hyperlink{classCustomer}{Customer} \&c)
+\begin{CompactList}\small\item\em overload the insertion operator \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Author:]Jacob Pledger (using Rex's Solution) \end{Desc}
+\begin{Desc}
+\item[Date:]Nov 6, 2009 \end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{customer_8h_c401f74b175499814fc5f425e9196cfc}{
+\index{customer.h@{customer.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!customer.h@{customer.h}}
+\subsubsection[operator$<$$<$]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf Customer} \& {\em c})}}
+\label{customer_8h_c401f74b175499814fc5f425e9196cfc}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em os}]the stream to read from and the updated stream \item[\mbox{$\leftarrow$} {\em c}]the customer to be inserted into the stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+\begin{Desc}
+\item[Precondition:]the stream is ready to be written to \end{Desc}
+
+
+References Customer::write().\hypertarget{customer_8h_936b0b1707ba931409c2cfd817696448}{
+\index{customer.h@{customer.h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!customer.h@{customer.h}}
+\subsubsection[operator$>$$>$]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (istream \& {\em is}, \/  {\bf Customer} \& {\em c})}}
+\label{customer_8h_936b0b1707ba931409c2cfd817696448}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em is}]the stream to read from and the updated stream \item[\mbox{$\rightarrow$} {\em c}]the customer to be extracted from the stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+\begin{Desc}
+\item[Precondition:]the stream is ready to be read from \end{Desc}
+\begin{Desc}
+\item[Postcondition:]{\em c\/} contains the customer read \end{Desc}
+
+
+References Customer::read().

@@ -1,0 +1,98 @@
+\hypertarget{classPersonalCustomer}{
+\section{PersonalCustomer Class Reference}
+\label{classPersonalCustomer}\index{PersonalCustomer@{PersonalCustomer}}
+}
+A simple class to represent a \hyperlink{classPersonalCustomer}{PersonalCustomer} who IS A \hyperlink{classCustomer}{Customer}.  
+
+
+{\tt \#include $<$personalCustomer.h$>$}
+
+Inheritance diagram for PersonalCustomer::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classPersonalCustomer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classPersonalCustomer_a85bdbac31d8424ff81a44d803fbec53}{PersonalCustomer} (const string \&name=\char`\"{}UNKNOWN\char`\"{}, const string \&sin=\char`\"{}000000000\char`\"{})
+\begin{CompactList}\small\item\em Create a personal customer with a name, and SIN. \item\end{CompactList}\item 
+virtual \hyperlink{classCustomer}{Customer} $\ast$ \hyperlink{classPersonalCustomer_a1e9e9e14356c0ff7a3d97c999e44388}{clone} () const 
+\begin{CompactList}\small\item\em return a copy of yourself \item\end{CompactList}\item 
+virtual istream \& \hyperlink{classPersonalCustomer_81861fd3353273de8c4da5f273ecfd26}{read} (istream \&is)  throw (input\_\-format\_\-error)
+\begin{CompactList}\small\item\em Reads the information for a personal customer from a stream. \item\end{CompactList}\item 
+virtual ostream \& \hyperlink{classPersonalCustomer_123975841172a6933c0358907d29f495}{write} (ostream \&os) const 
+\begin{CompactList}\small\item\em Writes the information for a personal customer to a stream. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPersonalCustomer_a85bdbac31d8424ff81a44d803fbec53}{
+\index{PersonalCustomer@{PersonalCustomer}!PersonalCustomer@{PersonalCustomer}}
+\index{PersonalCustomer@{PersonalCustomer}!PersonalCustomer@{PersonalCustomer}}
+\subsubsection[PersonalCustomer]{\setlength{\rightskip}{0pt plus 5cm}PersonalCustomer::PersonalCustomer (const string \& {\em name} = {\tt \char`\"{}UNKNOWN\char`\"{}}, \/  const string \& {\em sin} = {\tt \char`\"{}000000000\char`\"{}})\hspace{0.3cm}{\tt  \mbox{[}inline\mbox{]}}}}
+\label{classPersonalCustomer_a85bdbac31d8424ff81a44d803fbec53}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftarrow$} {\em name}]this personal customer's name; default {\bf UNKNOWN} \item[\mbox{$\leftarrow$} {\em sin}]this personal customer's SIN; defaults to 000000000 \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPersonalCustomer_a1e9e9e14356c0ff7a3d97c999e44388}{
+\index{PersonalCustomer@{PersonalCustomer}!clone@{clone}}
+\index{clone@{clone}!PersonalCustomer@{PersonalCustomer}}
+\subsubsection[clone]{\setlength{\rightskip}{0pt plus 5cm}{\bf Customer} $\ast$ PersonalCustomer::clone () const\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classPersonalCustomer_a1e9e9e14356c0ff7a3d97c999e44388}
+
+
+\begin{Desc}
+\item[Returns:]a pointer to a copy of a \hyperlink{classPersonalCustomer}{PersonalCustomer} \end{Desc}
+
+
+Implements \hyperlink{classCustomer_406fb74a887e5f0eb91aa49301534bb4}{Customer}.\hypertarget{classPersonalCustomer_81861fd3353273de8c4da5f273ecfd26}{
+\index{PersonalCustomer@{PersonalCustomer}!read@{read}}
+\index{read@{read}!PersonalCustomer@{PersonalCustomer}}
+\subsubsection[read]{\setlength{\rightskip}{0pt plus 5cm}istream \& PersonalCustomer::read (istream \& {\em is})  throw (input\_\-format\_\-error)\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classPersonalCustomer_81861fd3353273de8c4da5f273ecfd26}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em is}]the stream to read from and the updated stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em thrown}]if the SIN is of incorrect length or if it contains alphabetic characters \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+
+
+Implements \hyperlink{classCustomer_3327c4e5e7f3a9435f3b71372778386a}{Customer}.\hypertarget{classPersonalCustomer_123975841172a6933c0358907d29f495}{
+\index{PersonalCustomer@{PersonalCustomer}!write@{write}}
+\index{write@{write}!PersonalCustomer@{PersonalCustomer}}
+\subsubsection[write]{\setlength{\rightskip}{0pt plus 5cm}ostream \& PersonalCustomer::write (ostream \& {\em os}) const\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classPersonalCustomer_123975841172a6933c0358907d29f495}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em os}]the stream to write to and the updated stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+
+
+Implements \hyperlink{classCustomer_a4ef104426d09a4817cb2d55e5e674d0}{Customer}.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+\hyperlink{personalCustomer_8h}{personalCustomer.h}\item 
+\hyperlink{personalCustomer_8cc}{personalCustomer.cc}\end{CompactItemize}

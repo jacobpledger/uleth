@@ -1,0 +1,64 @@
+\hypertarget{customer_8cc}{
+\section{customer.cc File Reference}
+\label{customer_8cc}\index{customer.cc@{customer.cc}}
+}
+Implementation file for the customer class. 
+
+{\tt \#include $<$iostream$>$}\par
+{\tt \#include \char`\"{}customer.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+istream \& \hyperlink{customer_8cc_936b0b1707ba931409c2cfd817696448}{operator$>$$>$} (istream \&is, \hyperlink{classCustomer}{Customer} \&c)
+\begin{CompactList}\small\item\em overload the extraction operator \item\end{CompactList}\item 
+ostream \& \hyperlink{customer_8cc_c401f74b175499814fc5f425e9196cfc}{operator$<$$<$} (ostream \&os, const \hyperlink{classCustomer}{Customer} \&c)
+\begin{CompactList}\small\item\em overload the insertion operator \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{Desc}
+\item[Author:]Jacob Pledger (using Rex's Solution) \end{Desc}
+\begin{Desc}
+\item[Date:]Nov 6, 2009 \end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{customer_8cc_c401f74b175499814fc5f425e9196cfc}{
+\index{customer.cc@{customer.cc}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!customer.cc@{customer.cc}}
+\subsubsection[operator$<$$<$]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (ostream \& {\em os}, \/  const {\bf Customer} \& {\em c})}}
+\label{customer_8cc_c401f74b175499814fc5f425e9196cfc}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em os}]the stream to read from and the updated stream \item[\mbox{$\leftarrow$} {\em c}]the customer to be inserted into the stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+\begin{Desc}
+\item[Precondition:]the stream is ready to be written to \end{Desc}
+
+
+References Customer::write().\hypertarget{customer_8cc_936b0b1707ba931409c2cfd817696448}{
+\index{customer.cc@{customer.cc}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!customer.cc@{customer.cc}}
+\subsubsection[operator$>$$>$]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (istream \& {\em is}, \/  {\bf Customer} \& {\em c})}}
+\label{customer_8cc_936b0b1707ba931409c2cfd817696448}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em is}]the stream to read from and the updated stream \item[\mbox{$\rightarrow$} {\em c}]the customer to be extracted from the stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the updated stream, so that it can be cascaded \end{Desc}
+\begin{Desc}
+\item[Precondition:]the stream is ready to be read from \end{Desc}
+\begin{Desc}
+\item[Postcondition:]{\em c\/} contains the customer read \end{Desc}
+
+
+References Customer::read().

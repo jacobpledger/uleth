@@ -1,0 +1,204 @@
+\hypertarget{bank_8cc}{
+\section{bank.cc File Reference}
+\label{bank_8cc}\index{bank.cc@{bank.cc}}
+}
+Client test program to test the account class hierarchy. 
+
+{\tt \#include $<$iostream$>$}\par
+{\tt \#include $<$string$>$}\par
+{\tt \#include $<$vector$>$}\par
+{\tt \#include $<$cctype$>$}\par
+{\tt \#include \char`\"{}account.h\char`\"{}}\par
+{\tt \#include \char`\"{}savingsAccount.h\char`\"{}}\par
+{\tt \#include \char`\"{}chequingAccount.h\char`\"{}}\par
+{\tt \#include \char`\"{}chequingSavingsAccount.h\char`\"{}}\par
+{\tt \#include \char`\"{}myio.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{bank_8cc_70339132ae3f777ae066d20627ff54b0}{fill} (vector$<$ \hyperlink{classAccount}{Account} $\ast$ $>$ \&)
+\begin{CompactList}\small\item\em fill the list of accounts by reading data from a file \item\end{CompactList}\item 
+void \hyperlink{bank_8cc_73c41f1a80178722017eda427db1751c}{withdraw} (const vector$<$ \hyperlink{classAccount}{Account} $\ast$ $>$ \&)  throw (account\_\-not\_\-found)
+\begin{CompactList}\small\item\em withdraw money from an account \item\end{CompactList}\item 
+void \hyperlink{bank_8cc_7fd29837f07478ca4ef36daab5d3ea9d}{deposit} (const vector$<$ \hyperlink{classAccount}{Account} $\ast$ $>$ \&)  throw (account\_\-not\_\-found)
+\begin{CompactList}\small\item\em deposit money to an account \item\end{CompactList}\item 
+void \hyperlink{bank_8cc_f920e328fb47ce96dcbe3de45a90c6d0}{update} (const vector$<$ \hyperlink{classAccount}{Account} $\ast$ $>$ \&)
+\begin{CompactList}\small\item\em perform end of month updates on all accounts \item\end{CompactList}\item 
+void \hyperlink{bank_8cc_fcb99ea1b51b50927e5a2c3843dc2f71}{print} (const vector$<$ \hyperlink{classAccount}{Account} $\ast$ $>$ \&list)
+\begin{CompactList}\small\item\em Polymorphically print each account in the list. \item\end{CompactList}\item 
+void \hyperlink{bank_8cc_054eccf6c029e8d8937d56d6ea95a2a9}{clear} (vector$<$ \hyperlink{classAccount}{Account} $\ast$ $>$ \&list)
+\begin{CompactList}\small\item\em Remove all items from the list. \item\end{CompactList}\item 
+int \hyperlink{bank_8cc_74ba9d9415e5a7f89551a5026d1d6ce9}{find} (const vector$<$ \hyperlink{classAccount}{Account} $\ast$ $>$ \&accts, const string \&number)
+\begin{CompactList}\small\item\em find the index of the account which has this account number \item\end{CompactList}\item 
+\hypertarget{bank_8cc_b13e858612c64eeef73aff1d8a03945e}{
+void \hyperlink{bank_8cc_b13e858612c64eeef73aff1d8a03945e}{printMenu} ()}
+\label{bank_8cc_b13e858612c64eeef73aff1d8a03945e}
+
+\begin{CompactList}\small\item\em print a list of available options. \item\end{CompactList}\item 
+void \hyperlink{bank_8cc_e63f8b5b428b267ae55a9e52930f5240}{menuSelect} (vector$<$ \hyperlink{classAccount}{Account} $\ast$ $>$ \&accts)  throw (invalid\_\-menu\_\-choice)
+\begin{CompactList}\small\item\em select from the list provided by \hyperlink{bank_8cc_b13e858612c64eeef73aff1d8a03945e}{printMenu()} \item\end{CompactList}\item 
+\hypertarget{bank_8cc_e66f6b31b5ad750f1fe042a706a4e3d4}{
+int \hyperlink{bank_8cc_e66f6b31b5ad750f1fe042a706a4e3d4}{main} ()}
+\label{bank_8cc_e66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{CompactList}\small\item\em the main function for the testing program \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+It reads various types of accounts into a list from a file and allows you to print the entire list of accounts, deposit money to an account, withdraw money from an account and perform end of month updates. All these operations are done polymorphically.
+
+\begin{Desc}
+\item[Author:]Jacob Pledger (using Rex's solution) \end{Desc}
+\begin{Desc}
+\item[Date:]Nov 6, 2009 \end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{bank_8cc_054eccf6c029e8d8937d56d6ea95a2a9}{
+\index{bank.cc@{bank.cc}!clear@{clear}}
+\index{clear@{clear}!bank.cc@{bank.cc}}
+\subsubsection[clear]{\setlength{\rightskip}{0pt plus 5cm}void clear (vector$<$ {\bf Account} $\ast$ $>$ \& {\em list})}}
+\label{bank_8cc_054eccf6c029e8d8937d56d6ea95a2a9}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftrightarrow$} {\em list}]imports the list to be cleared and exports the emptied list \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondition:]the list will be empty i.e. list.size() = 0 \end{Desc}
+
+
+Referenced by fill(), and main().\hypertarget{bank_8cc_7fd29837f07478ca4ef36daab5d3ea9d}{
+\index{bank.cc@{bank.cc}!deposit@{deposit}}
+\index{deposit@{deposit}!bank.cc@{bank.cc}}
+\subsubsection[deposit]{\setlength{\rightskip}{0pt plus 5cm}void deposit (const vector$<$ {\bf Account} $\ast$ $>$ \& {\em accounts})  throw (account\_\-not\_\-found)}}
+\label{bank_8cc_7fd29837f07478ca4ef36daab5d3ea9d}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftarrow$} {\em accounts}]imports the list of accounts \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondition:]the balance will be increased \end{Desc}
+\begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em thrown}]if \hyperlink{bank_8cc_74ba9d9415e5a7f89551a5026d1d6ce9}{find()} fails to locate an account \end{description}
+\end{Desc}
+
+
+References find().
+
+Referenced by menuSelect().\hypertarget{bank_8cc_70339132ae3f777ae066d20627ff54b0}{
+\index{bank.cc@{bank.cc}!fill@{fill}}
+\index{fill@{fill}!bank.cc@{bank.cc}}
+\subsubsection[fill]{\setlength{\rightskip}{0pt plus 5cm}void fill (vector$<$ {\bf Account} $\ast$ $>$ \& {\em accounts})}}
+\label{bank_8cc_70339132ae3f777ae066d20627ff54b0}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\rightarrow$} {\em accounts}]exports the list of accounts\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Precondition:]the list is empty \end{Desc}
+
+
+References clear(), and openIn().
+
+Referenced by main().\hypertarget{bank_8cc_74ba9d9415e5a7f89551a5026d1d6ce9}{
+\index{bank.cc@{bank.cc}!find@{find}}
+\index{find@{find}!bank.cc@{bank.cc}}
+\subsubsection[find]{\setlength{\rightskip}{0pt plus 5cm}int find (const vector$<$ {\bf Account} $\ast$ $>$ \& {\em accounts}, \/  const string \& {\em number})}}
+\label{bank_8cc_74ba9d9415e5a7f89551a5026d1d6ce9}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftarrow$} {\em accounts}]imports the list of accounts \item[\mbox{$\leftarrow$} {\em number}]imports the account number to search for \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the index of the account number, -1 if not found \end{Desc}
+
+
+Referenced by deposit(), and withdraw().\hypertarget{bank_8cc_e63f8b5b428b267ae55a9e52930f5240}{
+\index{bank.cc@{bank.cc}!menuSelect@{menuSelect}}
+\index{menuSelect@{menuSelect}!bank.cc@{bank.cc}}
+\subsubsection[menuSelect]{\setlength{\rightskip}{0pt plus 5cm}void menuSelect (vector$<$ {\bf Account} $\ast$ $>$ \& {\em accts})  throw (invalid\_\-menu\_\-choice)}}
+\label{bank_8cc_e63f8b5b428b267ae55a9e52930f5240}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftarrow$} {\em loaded}]vector of accounts \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Precondition:]the vector has been loaded with accounts \end{Desc}
+\begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em thrown}]if the user enters an invalid choice \end{description}
+\end{Desc}
+
+
+References clrStream(), deposit(), print(), printMenu(), update(), and withdraw().
+
+Referenced by main().\hypertarget{bank_8cc_fcb99ea1b51b50927e5a2c3843dc2f71}{
+\index{bank.cc@{bank.cc}!print@{print}}
+\index{print@{print}!bank.cc@{bank.cc}}
+\subsubsection[print]{\setlength{\rightskip}{0pt plus 5cm}void print (const vector$<$ {\bf Account} $\ast$ $>$ \& {\em accounts})}}
+\label{bank_8cc_fcb99ea1b51b50927e5a2c3843dc2f71}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftarrow$} {\em accounts}]imports the list of accounts to print \end{description}
+\end{Desc}
+
+
+Referenced by menuSelect().\hypertarget{bank_8cc_f920e328fb47ce96dcbe3de45a90c6d0}{
+\index{bank.cc@{bank.cc}!update@{update}}
+\index{update@{update}!bank.cc@{bank.cc}}
+\subsubsection[update]{\setlength{\rightskip}{0pt plus 5cm}void update (const vector$<$ {\bf Account} $\ast$ $>$ \& {\em accounts})}}
+\label{bank_8cc_f920e328fb47ce96dcbe3de45a90c6d0}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftarrow$} {\em accounts}]imports the list of accounts \end{description}
+\end{Desc}
+
+
+Referenced by menuSelect().\hypertarget{bank_8cc_73c41f1a80178722017eda427db1751c}{
+\index{bank.cc@{bank.cc}!withdraw@{withdraw}}
+\index{withdraw@{withdraw}!bank.cc@{bank.cc}}
+\subsubsection[withdraw]{\setlength{\rightskip}{0pt plus 5cm}void withdraw (const vector$<$ {\bf Account} $\ast$ $>$ \& {\em accounts})  throw (account\_\-not\_\-found)}}
+\label{bank_8cc_73c41f1a80178722017eda427db1751c}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[\mbox{$\leftarrow$} {\em accounts}]imports the list of accounts \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Postcondition:]the balance will be decreased \end{Desc}
+\begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em thrown}]if \hyperlink{bank_8cc_74ba9d9415e5a7f89551a5026d1d6ce9}{find()} fails to loacte a valid account \end{description}
+\end{Desc}
+
+
+References find().
+
+Referenced by menuSelect().
